@@ -1,0 +1,291 @@
+/* General Settings */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Custom Row */
+
+.custom-row {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    background: url('../../assets/images/programbg.png') no-repeat center center/cover;
+    /* Corrected background image URL */
+}
+
+
+/* Overlay for Shade */
+
+.custom-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Adjust the opacity to change the shade */
+    z-index: -1;
+    /* Ensure the overlay is behind the content */
+}
+
+
+/* For Tablets (screens up to 768px wide) */
+
+@media (max-width: 768px) {
+    .custom-row {
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* For Mobile (screens up to 480px wide) */
+
+@media (max-width: 480px) {
+    .custom-row {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Custom Column */
+
+.custom-column {
+    width: 550px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+
+/* No Animation Section */
+
+.no-animation {
+    background-color: #ffffff36;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    text-align: left;
+}
+
+.no-animation h2 {
+    font-size: 2.5rem;
+    color: #1c1c1c;
+    margin-bottom: 10px;
+    margin-top: -15px;
+}
+
+.no-animation h4 {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.no-animation p {
+    font-size: 1rem;
+    color: #393939;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-left: 65px;
+}
+
+
+/* H6 with Icon */
+
+.h6-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.h6-wrapper h6 {
+    color: orange;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.zodiac-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Icon Wrapper */
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+    margin-bottom: 15px;
+}
+
+.icon-wrapper img {
+    width: 40px;
+    height: 40px;
+    margin-left: -70px;
+}
+
+.icon-wrapper h4 {
+    font-size: 1.3rem;
+    color: #666;
+    margin: 0;
+    margin-left: 20px;
+}
+
+
+/* Button */
+
+.discover-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff6600, #ff9900);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s ease, box-shadow 0.4s ease;
+    margin-left: 65px;
+    margin-top: 10px;
+}
+
+.discover-button:hover {
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    transform: translateY(-5px) scale(1.1);
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+}
+
+
+/* Responsive Design */
+
+
+/* For tablets (screens up to 768px wide) */
+
+@media (max-width: 768px) {
+    .custom-column {
+        width: 100%;
+        height: auto;
+    }
+    .no-animation {
+        padding: 20px;
+    }
+    .h6-wrapper h6 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .no-animation h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .no-animation p {
+        font-size: 0.9rem;
+        margin-left: 20px;
+    }
+    .icon-wrapper {
+        margin-left: 20px;
+    }
+    .discover-button {
+        margin-left: 20px;
+    }
+}
+
+
+/* For mobile phones (screens up to 480px wide) */
+
+@media (max-width: 480px) {
+    .custom-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .custom-column {
+        width: 100%;
+        height: auto;
+    }
+    .no-animation {
+        padding: 15px;
+    }
+    .no-animation h2 {
+        font-size: 1.5rem;
+    }
+    .no-animation h4 {
+        font-size: 1rem;
+    }
+    .no-animation p {
+        font-size: 1rem;
+        margin-left: 10px;
+        text-align: justify;
+    }
+    .icon-wrapper {
+        margin-left: 10px;
+        display: flex;
+        margin-left: 75px;
+        /* Center the icon and text horizontally */
+        /* Align them vertically in the middle */
+        margin-bottom: 15px;
+    }
+    .discover-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin-left: 10px;
+        margin-top: 20px;
+        align-items: center;
+        display: flex;
+        /* Make it a flex container */
+        justify-content: center;
+        /* Horizontally center the button content */
+        margin-left: auto;
+        /* Align it to the center */
+        margin-right: auto;
+        /* Align it to the center */
+    }
+    /* Centering the h6 and zodiac-icon in mobile */
+    .h6-wrapper {
+        display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Align vertically */
+        margin-bottom: 15px;
+    }
+    .h6-wrapper h6 {
+        font-size: 0.9rem;
+        margin-left: 1px;
+        text-align: center;
+        /* Ensure text is centered */
+    }
+    .zodiac-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+    /* Target the 1st and 4th columns and make their images smaller in mobile view */
+    .custom-row .custom-column:nth-child(1) img,
+    .custom-row .custom-column:nth-child(4) img {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,174 @@
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    flex-direction: column;
+    gap: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(255, 253, 246) 100%);
+}
+
+.pclass {
+    text-align: center;
+    margin: 0 150px;
+    color: #333;
+}
+
+.about-wrapper {
+    position: relative;
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-sub-title1 {
+    font-size: 1.5rem;
+    color: #ffa200;
+    /* Yellow color */
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.why-choose-us {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: -15px;
+}
+
+
+/* Center Image */
+
+.about-image {
+    position: relative;
+    z-index: 1;
+}
+
+.about-image img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Cards Around the Image */
+
+.about-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+    transition: transform 0.3s ease;
+    padding: 15px 10px;
+    gap: 10px;
+    border: 1px solid rgba(255, 191, 0, 0.552);
+}
+
+.about-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Card Content */
+
+.card-content {
+    flex: 1;
+    text-align: left;
+}
+
+
+/* Card Positions */
+
+.about-card.top-left {
+    top: 15%;
+    left: 15%;
+}
+
+.about-card.top-right {
+    top: 15%;
+    right: 10%;
+}
+
+.about-card.left-center {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.about-card.right-center {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.about-card.bottom-left {
+    bottom: -5%;
+    left: 15%;
+}
+
+.about-card.bottom-right {
+    bottom: -5%;
+    right: 10%;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .about-card {
+        position: static;
+        max-width: 90%;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-image img {
+        width: 350px;
+        height: 350px;
+    }
+    .pclass {
+        margin: 0 10px;
+        margin-top: -15px;
+    }
+    .card-content {
+        flex: 1;
+        text-align: center;
+    }
+    .why-choose-us {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+}

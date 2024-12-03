@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.service-count-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.service-count {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+    padding: 20px;
+    background: #fff9ec;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -70px;
+    border: 1px solid #ffe797;
+}
+
+.service-item {
+    flex: 1 1 calc(25% - 20px);
+    /* 4 items per row */
+    text-align: center;
+}
+
+.service-item h2 {
+    font-size: 2.5rem;
+    color: #b88d00;
+    margin: 0;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #b29100;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 calc(5% - 10px);
+        /* Ensure 4 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        flex: 1 1 5%;
+        /* 4 items per row with equal width */
+    }
+    .service-item h2 {
+        font-size: 1.8rem;
+        /* Adjust font size for smaller screens */
+    }
+    .service-item p {
+        font-size: 0.8rem;
+        /* Adjust font size for smaller screens */
+    }
+    .service-count {
+        width: 300PX;
+        height: 100PX;
+    }
+}

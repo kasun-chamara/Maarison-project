@@ -1,0 +1,161 @@
+.hero-section {
+    height: 105vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/images/Hero.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: rgb(62, 62, 62);
+    line-height: 1.2;
+    margin-top: 80px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: rgb(62, 62, 62);
+    line-height: 1.6;
+}
+
+.hero-content .btn {
+    background: linear-gradient(135deg, #ff7f50, #ff8800);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 123, 89, 0.5);
+}
+
+.hero-content .btn:hover {
+    background: linear-gradient(135deg, #ff6b81, #ff7f50);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 129, 0.5);
+    /* Slightly enlarge on hover */
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper {
+    max-width: 100%;
+    text-align: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-top: 80px;
+}
+
+
+/* Media Queries for Responsiveness */
+
+
+/* For devices with width less than 1200px (e.g., laptops) */
+
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-content .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .image-wrapper img {
+        margin-top: 60px;
+    }
+}
+
+
+/* For tablets (width less than 768px) */
+
+@media (max-width: 767px) {
+    .hero-section {
+        height: auto;
+        padding: 20px;
+    }
+    .hero-title {
+        font-size: 3.5rem;
+        margin-top: 50px;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-content .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .image-wrapper img {
+        margin-top: 40px;
+    }
+}
+
+
+/* For mobile devices (width less than 480px) */
+
+@media (max-width: 479px) {
+    .hero-section {
+        height: 110vh;
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+    .hero-image {
+        width: 100%;
+        margin-top: 30PX;
+    }
+    .hero-title {
+        font-size: 3rem;
+        margin-top: 80px;
+        /* Adjusted margin for better spacing */
+        line-height: 1;
+        text-align: center;
+    }
+    .hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        text-align: center;
+        /* Removed negative margin */
+    }
+    .hero-content .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        display: block;
+        /* Makes the button behave like a block-level element */
+        margin-left: auto;
+        /* Auto margin on left side */
+        margin-right: auto;
+        /* Auto margin on right side */
+    }
+    .image-wrapper img {
+        margin-top: 0;
+        /* Removed large negative margin */
+    }
+}
