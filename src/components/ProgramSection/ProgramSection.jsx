@@ -56,6 +56,10 @@ const ProgramSection = () => {
       <div className="custom-column column-4">
         <img src={astrologyBanner2} alt="Astrology Services Banner 2" />
       </div>
+      
+
+
+
     </div>
   );
 };

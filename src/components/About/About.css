@@ -7,6 +7,7 @@
     gap: 20px;
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(255, 253, 246) 100%);
+    background: url("../../assets/images/programbg.png") no-repeat;
 }
 
 .pclass {
@@ -170,5 +171,11 @@
         text-align: center;
         margin-bottom: 20px;
         color: #333;
+    }
+    .about-card.bottom-left {
+        display: none;
+    }
+    .about-card.bottom-right {
+        display: none;
     }
 }

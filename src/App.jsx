@@ -11,6 +11,7 @@ import Service from './components/Srvc/Service';
 import ProductSlider from './components/Product/ProductSlider';
 import Footer from './components/Footer/Footer';
 import ProgramSection from './components/ProgramSection/ProgramSection';
+import MeetMaarisonAcharya from './components/MeetMaarisonAcharya/MeetMaarisonAcharya';
 
 const App = () => {
   return (
@@ -22,7 +23,8 @@ const App = () => {
        {/* <Service />  */}
      <ProductSlider />
     <ProgramSection />
-      {/* <Footer /> */}
+    <MeetMaarisonAcharya />
+  <Footer /> 
     </>
   );
 };
