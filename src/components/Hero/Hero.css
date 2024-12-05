@@ -18,9 +18,9 @@
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 6.5rem;
     font-weight: 700;
-    color: rgb(62, 62, 62);
+    color: #666666;
     line-height: 1.2;
     margin-top: 80px;
 }
@@ -28,7 +28,7 @@
 .hero-subtitle {
     font-size: 1.2rem;
     margin-top: 1rem;
-    color: rgb(62, 62, 62);
+    color: #666666;
     line-height: 1.6;
 }
 

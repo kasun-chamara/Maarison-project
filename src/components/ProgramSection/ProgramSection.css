@@ -77,11 +77,37 @@ html {
 }
 
 
+/* Add fade-in animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+
 /* No Animation Section */
 
 .no-animation {
     background-color: #ffffff36;
-    color: #333;
+    color: #666666;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,7 +118,7 @@ html {
 
 .no-animation h2 {
     font-size: 2.5rem;
-    color: #1c1c1c;
+    color: #666666;
     margin-bottom: 10px;
     margin-top: -15px;
 }
@@ -106,7 +132,7 @@ html {
 
 .no-animation p {
     font-size: 1rem;
-    color: #393939;
+    color: #666666;
     margin-bottom: 20px;
     line-height: 1.6;
     font-weight: 300;

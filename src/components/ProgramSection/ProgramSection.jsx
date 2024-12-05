@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ProgramSection.css'; // Import the corresponding CSS file
 
 // Import images from the assets folder
 import planetIcon from '../../assets/images/planet.png';
-import astrologyBanner1 from '../../assets/images/src.jpg';
-import astrologyBanner2 from '../../assets/images/src.jpg';
+import astrologyBanner1 from '../../assets/images/event1.svg';
+import astrologyBanner2 from '../../assets/images/event2.svg';
 import zodiacIcon from '../../assets/images/zodiac.png'; // Import zodiac icon
 
 const ProgramSection = () => {
+  useEffect(() => {
+    const columns = document.querySelectorAll('.custom-column');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    columns.forEach((column) => observer.observe(column));
+
+    // Cleanup observer on component unmount
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="custom-row">
       {/* First Row: Single Column with Image */}
-      <div className="custom-column column-1">
+      <div className="custom-column column-1 fade-in">
         <img src={astrologyBanner1} alt="Astrology Services Banner 1" />
       </div>
 
@@ -28,7 +50,7 @@ const ProgramSection = () => {
             <h4>Shape Your Path</h4>
           </div>
           <p>
-            Discover how astrology can guide your life journey. Learn about your zodiac, personality traits, and predictions tailored just for you. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae fugit fuga ducimus repudiandae non nemo facere, magnam ipsam eaque vel nostrum provident laborum architecto quis, minima sint odio quo tempora?
+            Discover how astrology can guide your life journey. Learn about your zodiac, personality traits, and predictions tailored just for you. Learn about your zodiac, personality traits, and predictions tailored just for you.
           </p>
           <button className="discover-button">More Discover</button>
         </div>
@@ -46,20 +68,16 @@ const ProgramSection = () => {
             <h4>Unlock Your Future</h4>
           </div>
           <p>
-            Discover how astrology can guide your life journey. Learn about your zodiac, personality traits, and predictions tailored just for you. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae fugit fuga ducimus repudiandae non nemo facere, magnam ipsam eaque vel nostrum provident laborum architecto quis, minima sint odio quo tempora?
+            Discover how astrology can guide your life journey.Learn about your zodiac, personality traits, and predictions tailored just for you. Learn about your zodiac, personality traits, and predictions tailored just for you.
           </p>
           <button className="discover-button">More Discover</button>
         </div>
       </div>
 
       {/* Third Row: Single Column with Image */}
-      <div className="custom-column column-4">
+      <div className="custom-column column-4 fade-in">
         <img src={astrologyBanner2} alt="Astrology Services Banner 2" />
       </div>
-      
-
-
-
     </div>
   );
 };

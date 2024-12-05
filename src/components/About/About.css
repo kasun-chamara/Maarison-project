@@ -13,7 +13,7 @@
 .pclass {
     text-align: center;
     margin: 0 150px;
-    color: #333;
+    color: #666666;
 }
 
 .about-wrapper {
@@ -40,7 +40,7 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #666666;
     margin-top: -15px;
 }
 
@@ -71,13 +71,13 @@
     display: flex;
     align-items: center;
     max-width: 300px;
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(184deg, #ffffff 0%, rgba(255, 235, 191, 0.4) 100%);
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     font-family: "Arial", sans-serif;
     font-size: 0.9rem;
     line-height: 1.6;
-    color: #333;
+    color: #666666;
     transition: transform 0.3s ease;
     padding: 15px 10px;
     gap: 10px;
@@ -138,7 +138,7 @@
 }
 
 
-/* Responsive Design */
+/* Responsive Design for Mobile and Tablet (max-width: 768px) */
 
 @media (max-width: 768px) {
     .about-card {
@@ -147,11 +147,15 @@
         flex-direction: column;
         text-align: center;
         gap: 5px;
+        margin: 10px auto;
+        /* Center the cards */
     }
     .about-wrapper {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        justify-content: center;
+        /* Center content vertically */
     }
     .about-image img {
         width: 350px;
@@ -177,5 +181,28 @@
     }
     .about-card.bottom-right {
         display: none;
+    }
+}
+
+
+/* Further customization for smaller screens (e.g., mobile phones) */
+
+@media (max-width: 480px) {
+    .about-image img {
+        width: 300px;
+        height: 300px;
+    }
+    .why-choose-us {
+        font-size: 2rem;
+        /* Slightly smaller font size for very small screens */
+    }
+    .pclass {
+        margin: 0 5px;
+        /* Adjust margin for very small screens */
+    }
+    .about-card {
+        max-width: 100%;
+        margin-top: -20px;
+        /* Take up full width for smaller devices */
     }
 }

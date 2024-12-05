@@ -6,7 +6,7 @@
     padding: 0;
     font-family: "Poppins", Arial, sans-serif;
     background-color: #ffffff;
-    color: #333;
+    color: #666666;
 }
 
 
@@ -92,7 +92,7 @@
 .right-column h2 {
     font-size: 28px;
     font-weight: bold;
-    color: #4f4f4f;
+    color: #666666;
     margin-bottom: 15px;
     margin-top: -30px;
 }
@@ -316,4 +316,36 @@
     width: 30px;
     height: 30px;
     margin-right: 20px;
+}
+
+
+/* Bottom to Top Animation */
+
+
+/* Keyframe for Bottom to Top Animation */
+
+@keyframes bottomToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Apply Animation to the Section */
+
+.animate-bottom-to-top {
+    opacity: 0;
+    /* Start with hidden */
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.animate-bottom-to-top.visible {
+    animation: bottomToTop 1s ease-out forwards;
 }

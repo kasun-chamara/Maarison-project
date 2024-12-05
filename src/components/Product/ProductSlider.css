@@ -24,7 +24,7 @@
 .section-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #333;
+    color: #666666;
     letter-spacing: 1px;
     text-align: center;
     margin-bottom: 15px;
@@ -98,7 +98,7 @@
 }
 
 .product-price:hover {
-    color: #333;
+    color: #666666;
     transform: scale(1.1);
 }
 
