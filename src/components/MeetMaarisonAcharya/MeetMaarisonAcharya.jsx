@@ -1,7 +1,8 @@
 import React from "react";
 import "./MeetMaarisonAcharya.css";
 import Contactbg from "../../assets/images/Contactbg.svg";
-import DotsSvg from "../../assets/images/Dots.svg"; // Adjust the path
+import DotsSvg from "../../assets/images/Dots.svg"; 
+import zodiacIcon from '../../assets/images/zodiac.png';// Adjust the path
 
 const MeetMaarisonAcharya = () => {
   return (
@@ -46,6 +47,10 @@ const MeetMaarisonAcharya = () => {
 
         {/* Right Column: Form */}
         <div className="right-column">
+        <div className="h6-wrapper-2">
+            <img src={zodiacIcon} alt="Zodiac Icon" className="zodiac-icon" />
+            <h6>Maarison Wisdom</h6>
+          </div>
           <h2>Contact Us</h2>
           <form className="contact-form">
             <input type="text" placeholder="Name" required />
