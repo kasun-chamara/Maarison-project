@@ -34,22 +34,44 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="col-lg-3 col-md-6">
               <h5>Contact Us</h5>
-              <p>Email: <a href=""></a></p>
+              <p>Email: <a href="">info@astrology.com</a></p>
               <p>Phone: +123 456 7890</p>
               <p>Location: 123 Cosmic Road, Celestial City</p>
             </div>
 
             {/* Social Media */}
             <div className="col-lg-3 col-md-6">
-              <h5>Follow the Stars</h5>
-              <ul className="social-icons">
-                <li><a href="https://facebook.com" aria-label="Facebook"><FaFacebook /></a></li>
-                <li><a href="https://twitter.com" aria-label="Twitter"><FaTwitter /></a></li>
-                <li><a href="https://instagram.com" aria-label="Instagram"><FaInstagram /></a></li>
-                <li><a href="https://whatsapp.com" aria-label="WhatsApp"><FaWhatsapp /></a></li>
-                <li><a href="https://youtube.com" aria-label="YouTube"><FaYoutube /></a></li>
-              </ul>
-            </div>
+    <h5>Follow the Stars</h5>
+    <ul className="social-icons">
+        <li>
+            <a href="https://facebook.com" aria-label="Facebook">
+                <FaFacebook />
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com" aria-label="Twitter">
+                <FaTwitter />
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com" aria-label="Instagram">
+                <FaInstagram />
+            </a>
+        </li>
+        <li>
+            <a href="https://whatsapp.com" aria-label="WhatsApp">
+                <FaWhatsapp />
+            </a>
+        </li>
+        <li>
+            <a href="https://youtube.com" aria-label="YouTube">
+                <FaYoutube />
+            </a>
+        </li>
+    </ul>
+    <button className="meet-button">Meet Marison Acharya</button>
+</div>
+
           </div>
         </div>
       </div>

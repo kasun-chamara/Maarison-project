@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: stretch;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1000px;
     height: 500px;
     margin: -100px auto 40px;
     overflow: hidden;
@@ -110,7 +110,7 @@
 .contact-form select,
 .contact-form textarea {
     padding: 12px;
-    font-size: 16px;
+    font-size: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
     transition: box-shadow 0.3s, border 0.3s;
