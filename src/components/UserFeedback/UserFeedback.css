@@ -1,0 +1,48 @@
+.user-feedback-section {
+    width: 100%;
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -20px;
+    /* Prevent text from going outside the container */
+}
+
+.moving-text {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+    /* Smooth infinite scrolling */
+    align-items: center;
+}
+
+.icon-word-pair {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    /* Space between words with icons */
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 38px;
+    color: #fff;
+    /* Icon color */
+}
+
+.moving-text span {
+    font-size: 25px;
+    color: #fff;
+    /* Word color */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

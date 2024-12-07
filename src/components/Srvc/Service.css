@@ -8,6 +8,7 @@
     background: url('../../assets/images/programbg.png') no-repeat center center/cover;
     font-family: 'Poppins', Arial, sans-serif;
     overflow-x: hidden;
+    /* border-top: 10px solid #fff5e7; */
 }
 
 .service-header-title {
@@ -106,7 +107,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    border: 2px solid rgb(255, 164, 119);
+    border: 2px solid rgb(255, 218, 145);
     margin-bottom: 20px;
     position: relative;
     /* Required for positioning pseudo-elements */
@@ -230,4 +231,24 @@
     .service-custom-left-class h2 {
         font-size: 1.5rem;
     }
+}
+
+.service-read-more {
+    margin-top: auto;
+    /* Push button to the bottom of the card */
+}
+
+.service-read-more-button {
+    background: linear-gradient(45deg, #ff6600, #ff9900);
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.service-read-more-button:hover {
+    background-color: #0056b3;
 }

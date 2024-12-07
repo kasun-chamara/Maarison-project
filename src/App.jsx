@@ -12,19 +12,24 @@ import ProductSlider from './components/Product/ProductSlider';
 import Footer from './components/Footer/Footer';
 import ProgramSection from './components/ProgramSection/ProgramSection';
 import MeetMaarisonAcharya from './components/MeetMaarisonAcharya/MeetMaarisonAcharya';
+import UserFeedback from './components/UserFeedback/UserFeedback';
 
 const App = () => {
   return (
     <>
       <Header />
       <Hero />
+  
       <ServiceCount />
       <About />
-       <Service />  
-     <ProductSlider />
-    <ProgramSection />
-    <MeetMaarisonAcharya />
-  <Footer /> 
+     
+      <Service /> 
+       <UserFeedback /> 
+      <ProductSlider />
+      <ProgramSection />
+      <MeetMaarisonAcharya />
+      
+      <Footer /> 
     </>
   );
 };

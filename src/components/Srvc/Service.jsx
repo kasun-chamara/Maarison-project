@@ -58,16 +58,19 @@ const ServicePage = () => {
           <img src={placeholderImage1} alt="Expertise" />
         </div>
       </div>
-
-      <div className="service-bottom-row">
-        {services.map((service) => (
-          <div key={service.id} className={`service-column service-column-${service.id}`}>
-            <img src={service.image} alt={service.title} className="service-column-image" />
-            <h3 className="service-column-title">{service.title}</h3>
-            <p className="service-column-description">{service.description}</p>
-          </div>
-        ))}
+<div className="service-bottom-row">
+  {services.map((service) => (
+    <div key={service.id} className={`service-column service-column-${service.id}`}>
+      <img src={service.image} alt={service.title} className="service-column-image" />
+      <h3 className="service-column-title">{service.title}</h3>
+      <p className="service-column-description">{service.description}</p>
+      <div className="service-read-more">
+        <button className="service-read-more-button">Read More</button>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 };
