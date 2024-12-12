@@ -145,7 +145,7 @@
     text-transform: uppercase;
     border: none;
     border-radius: 6px;
-    background: linear-gradient(45deg, #ff6600, #ff9900);
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
     color: white;
     cursor: pointer;
     transition: transform 0.2s ease, background 0.3s ease;

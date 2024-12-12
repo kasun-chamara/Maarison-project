@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/images/logo.png";
 
 const Header = () => {
+  const location = useLocation(); // Get the current route
+
   useEffect(() => {
-    // Collapse the navbar when a link is clicked
     const navLinks = document.querySelectorAll(".nav-link");
     const navbarCollapse = document.getElementById("navbarNav");
 
@@ -38,29 +40,54 @@ const Header = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#home">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/" ? "active-link" : ""
+                }`}
+                to="/"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#services">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/services" ? "active-link" : ""
+                }`}
+                to="/services"
+              >
                 Services
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#products">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/products" ? "active-link" : ""
+                }`}
+                to="/products"
+              >
                 Products
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#programs">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/programs" ? "active-link" : ""
+                }`}
+                to="/programs"
+              >
                 Programs
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#events">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/events" ? "active-link" : ""
+                }`}
+                to="/events"
+              >
                 Events
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="bell-icon me-3">

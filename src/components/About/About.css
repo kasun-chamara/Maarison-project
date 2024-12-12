@@ -8,11 +8,12 @@
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(255, 253, 246) 100%);
     background: url("../../assets/images/programbg.png") no-repeat;
+    padding-top: 100px;
 }
 
 .pclass {
     text-align: center;
-    margin: 0 150px;
+    margin: 0 250px;
     color: #666666;
 }
 

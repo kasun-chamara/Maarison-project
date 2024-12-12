@@ -119,3 +119,23 @@
         margin-top: 10px;
     }
 }
+
+.nav-link {
+    color: #ffbb00;
+    /* Default color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active-link {
+    color: #007bff;
+    /* Highlighted color */
+    font-weight: bold;
+    transform: scale(1.02);
+    /* Slight scale animation */
+}
+
+.nav-link:hover {
+    color: #0056b3;
+    /* Optional hover effect */
+    transform: scale(1.05);
+}

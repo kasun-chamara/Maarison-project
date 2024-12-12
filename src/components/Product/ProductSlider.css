@@ -3,10 +3,11 @@
     background: url('../../assets/images/programbg.png') no-repeat center center/cover;
     background-color: #f9f9f9;
     /* Fallback background color */
-    border-top: 10px solid #dbdbdb;
-    border-bottom: 10px solid #fea71c;
+    /* border-top: 10px solid #dbdbdb; */
     position: relative;
     z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .product-section:before {
@@ -178,7 +179,7 @@
     position: absolute;
     bottom: 1px;
     right: 15px;
-    background-color: #fea71c;
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
     color: #fff;
     border: none;
     padding: 10px 20px;

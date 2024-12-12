@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./Service.css";
 import placeholderImage1 from "../../assets/images/src.jpg";
 import placeholderImage2 from "../../assets/images/src.jpg";
@@ -6,6 +6,34 @@ import placeholderImage3 from "../../assets/images/src.jpg";
 import placeholderImage4 from "../../assets/images/src.jpg";
 
 const ServicePage = () => {
+  const topSectionRef = useRef(null);
+  const bottomSectionRef = useRef(null);
+
+  useEffect(() => {
+    const animateOnScroll = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          entry.target.classList.remove("animate");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(animateOnScroll, {
+      threshold: 0.2,
+    });
+
+    if (topSectionRef.current) {
+      observer.observe(topSectionRef.current);
+    }
+    if (bottomSectionRef.current) {
+      observer.observe(bottomSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const services = [
     {
       id: 1,
@@ -37,7 +65,10 @@ const ServicePage = () => {
     <div className="service-page-container">
       <h1 className="service-header-title">Our Services</h1>
 
-      <div className="service-top-section">
+      <div
+        className="service-top-section animated-section left-to-right"
+        ref={topSectionRef}
+      >
         <div className="service-custom-left-class">
           <h2>Our Expertise</h2>
           <p>
@@ -58,19 +89,29 @@ const ServicePage = () => {
           <img src={placeholderImage1} alt="Expertise" />
         </div>
       </div>
-<div className="service-bottom-row">
-  {services.map((service) => (
-    <div key={service.id} className={`service-column service-column-${service.id}`}>
-      <img src={service.image} alt={service.title} className="service-column-image" />
-      <h3 className="service-column-title">{service.title}</h3>
-      <p className="service-column-description">{service.description}</p>
-      <div className="service-read-more">
-        <button className="service-read-more-button">Read More</button>
-      </div>
-    </div>
-  ))}
-</div>
 
+      <div
+        className="service-bottom-row animated-section right-to-left"
+        ref={bottomSectionRef}
+      >
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className={`service-column service-column-${service.id}`}
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="service-column-image"
+            />
+            <h3 className="service-column-title">{service.title}</h3>
+            <p className="service-column-description">{service.description}</p>
+            <div className="service-read-more">
+              <button className="service-read-more-button">Read More</button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

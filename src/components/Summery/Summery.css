@@ -3,7 +3,6 @@
     background: linear-gradient(135deg, #ffcb30, #ff8a00);
     padding: 30px 20px;
     box-sizing: border-box;
-    margin-bottom: 40px;
     position: relative;
     overflow: hidden;
     margin-top: -20px;
@@ -44,5 +43,46 @@
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+
+/* Responsive Design */
+
+
+/* Tablets */
+
+@media (max-width: 768px) {
+    .moving-text span {
+        font-size: 20px;
+    }
+    .icon {
+        font-size: 32px;
+    }
+    .icon-word-pair {
+        margin-right: 20px;
+    }
+    .moving-text {
+        animation: scrollText 18s linear infinite;
+        /* Slower scrolling for better readability on smaller screens */
+    }
+}
+
+
+/* Mobile Devices */
+
+@media (max-width: 480px) {
+    .moving-text span {
+        font-size: 18px;
+    }
+    .icon {
+        font-size: 28px;
+    }
+    .icon-word-pair {
+        margin-right: 15px;
+    }
+    .moving-text {
+        animation: scrollText 20s linear infinite;
+        /* Slowest scrolling for mobile */
     }
 }

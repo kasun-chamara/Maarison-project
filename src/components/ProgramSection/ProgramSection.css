@@ -16,6 +16,8 @@ html {
     gap: 20px;
     position: relative;
     background: url('../../assets/images/programbg.png') no-repeat center center/cover;
+    padding-top: 90px;
+    border-top: solid #ffc400 10px;
     /* Corrected background image URL */
 }
 
@@ -189,7 +191,7 @@ html {
     padding: 12px 30px;
     font-size: 1rem;
     color: #ffffff;
-    background: linear-gradient(45deg, #ff6600, #ff9900);
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
     border: none;
     border-radius: 5px;
     cursor: pointer;

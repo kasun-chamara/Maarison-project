@@ -1,5 +1,5 @@
 import React from "react";
-import "./UserFeedback.css";
+import "./Summery.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart, faSmile, faThumbsUp, faUsers, faCheckCircle, faHandshake, faClock, faTrophy, faBolt, faGem, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
