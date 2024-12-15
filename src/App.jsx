@@ -16,6 +16,7 @@ import MeetMaarisonAcharya from './components/MeetMaarisonAcharya/MeetMaarisonAc
 import Summery from './components/Summery/Summery';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import ProductsPage from './components/ProductsPage/ProductsPage'; // New ProductsPage Component
+import YouTubeSection from './components/YouTubeSection/YouTubeSection';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Hero />
             <Summery />
             <About />
+            {/* <YouTubeSection /> */}
             <Service />
             <ProductSlider />
             <ProgramSection />
@@ -35,7 +37,12 @@ const App = () => {
             <WhatsAppButton />
           </>
         } />
-        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products" element={
+          <>
+            <ProductsPage />
+            <Footer />  {/* Add Footer here */}
+          </>
+        } />
       </Routes>
     </Router>
   );

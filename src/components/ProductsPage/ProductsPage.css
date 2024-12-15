@@ -1,43 +1,34 @@
 /* General Styling */
 
 .products-page {
+    font-family: "Poppins", sans-serif;
+    background-color: #fefaf3;
+    color: #444444;
+    padding: 100px;
     text-align: center;
-    background-color: #fefefe;
-    /* Soft white for a calm background */
-    color: #666666;
-    /* Neutral and easy-to-read text color */
-    line-height: 1.6;
 }
 
 
-/* Banner Styling */
+/* Header Banner */
 
 .banner {
-    height: 300px;
-    background: linear-gradient(135deg, #fbbd08, #f2711c);
-    color: #666666;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, #ff9868, #fdbb2d);
+    color: #333;
+    padding: 40px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .banner h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin: 0;
-    font-weight: bold;
-    color: #666666;
-    margin-top: 70px;
 }
 
 .banner p {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    opacity: 0.9;
-    color: #666666;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 10px;
 }
 
 
@@ -46,122 +37,127 @@
 .category-tabs {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 25px;
-    gap: 15px;
+    /* This ensures the tabs wrap on smaller screens */
+    padding: 0 20px;
+    /* Padding for mobile screens */
 }
 
 .category-tab {
-    padding: 8px 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 10px;
-    color: #666666;
+    border: none;
+    background-color: #fff;
+    border: 1px solid #ffdc7c;
+    color: rgb(63, 63, 63);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: .8rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-transform: capitalize;
+    font-weight: bold;
 }
 
-.category-tab.active,
-.category-tab:hover {
-    background-color: #ffe6b3;
-    border-color: #f5a623;
-    color: #f2711c;
+.category-tab:hover,
+.category-tab.active {
+    background-color: #ffa200;
+    color: #fff;
 }
 
 
-/* Product List */
+/* Product Grid */
 
 .product-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.product-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 items per row */
+    /* 4 cards per row */
     gap: 20px;
-    justify-items: center;
+    margin-top: 20px;
 }
 
 .product-item {
     background-color: #ffffff;
-    border: 1px solid #e3e3e3;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
     overflow: hidden;
-    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 280px;
     width: 100%;
 }
 
 .product-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .product-image {
-    width: 100%;
-    height: 150px;
+    height: 180px;
     background-size: cover;
     background-position: center;
-    border-bottom: 1px solid #eeeeee;
 }
 
-.product-content {
-    padding: 20px;
+.product-details {
+    padding: 15px;
+    text-align: center;
 }
 
-.product-title {
-    font-size: 1.2rem;
+.product-details h2 {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.product-details p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.price-location {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #666666;
 }
 
-.product-description {
-    font-size: 0.8rem;
-    color: #666666;
-    margin-bottom: 20px;
+.price {
+    color: #ff9500;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.location {
+    color: #888;
 }
 
 .buy-button {
-    background: linear-gradient(135deg, #fbbd08, #f2711c);
-    color: #ffffff;
-    padding: 9px 8px;
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
+    color: #fff;
+    padding: 8px 16px;
     border: none;
-    border-radius: 5px;
-    font-size: 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .buy-button:hover {
-    background-color: #d35400;
+    background-color: #e65c50;
     transform: scale(1.05);
 }
 
 
-/* Responsive Design */
+/* Responsive Styles */
 
 
-/* Tablets and Medium Devices */
+/* For medium screens */
 
-@media (max-width: 992px) {
-    .product-list {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 items per row */
-    }
+@media (max-width: 768px) {
     .banner h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        text-align: center;
     }
-    .banner p {
-        font-size: 1.1rem;
+    .product-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* 2 cards per row */
     }
     .category-tab {
         font-size: 0.9rem;
@@ -170,54 +166,36 @@
 }
 
 
-/* Mobile Devices */
+/* For small screens */
 
 @media (max-width: 576px) {
-    .product-list {
-        grid-template-columns: 1fr;
-        /* 1 item per row */
-    }
-    .banner {
-        height: 250px;
-        padding: 20px;
-        margin-top: 30px;
-    }
     .banner h1 {
         font-size: 2rem;
+        text-align: center;
+        margin-top: 40px;
     }
     .banner p {
-        font-size: 0.9rem;
+        font-size: 1rem;
+    }
+    .product-container {
+        grid-template-columns: 1fr;
+        /* 1 card per row */
+    }
+    /* Category Tabs */
+    .category-tabs {
+        flex-direction: row;
+        /* Tabs in one line for mobile */
+        align-items: center;
+        justify-content: center;
     }
     .category-tab {
-        font-size: 0.8rem;
-        padding: 8px 15px;
+        font-size: .6rem;
+        padding: 12px 25px;
+        margin: 5px;
+        /* Add margin between tabs */
     }
-    .product-item {
-        max-width: 100%;
+    /* Add padding on left and right for mobile screens */
+    .products-page {
+        padding: 20px;
     }
-    .buy-button {
-        font-size: 0.9rem;
-        padding: 10px 15px;
-    }
-}
-
-
-/* Category Container Styling */
-
-.category-container {
-    margin: 20px auto;
-    background-color: #fdf4e3;
-    border: 1px solid #f5a623;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 40%;
-    max-width: 1000px;
-}
-
-.category-title {
-    font-size: 1.5rem;
-    color: #f2711c;
-    margin-bottom: 15px;
-    font-weight: bold;
 }

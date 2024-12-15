@@ -4,7 +4,6 @@ import "./ProductsPage.css";
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Sample product data with prices and locations
   const products = [
     {
       id: 1,
@@ -13,7 +12,8 @@ const ProductsPage = () => {
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
       location: "Sri Lanka",
-      image: "https://media.istockphoto.com/id/494162338/photo/seashell-on-the-beach.jpg?s=612x612&w=is&k=20&c=0CJs2JnlLTgSZmpWmRKuZNRBY3wxpbThXwpeGGVI8Ok=",
+      image:
+        "https://media.istockphoto.com/id/494162338/photo/seashell-on-the-beach.jpg?s=612x612&w=is&k=20&c=0CJs2JnlLTgSZmpWmRKuZNRBY3wxpbThXwpeGGVI8Ok=",
     },
     {
       id: 2,
@@ -22,16 +22,18 @@ const ProductsPage = () => {
       description: "Mystical silver Bangal.",
       price: "$80",
       location: "India",
-      image: "https://meerzah.pk/cdn/shop/files/bn-697_2.jpg?v=1725007752&width=1024",
+      image:
+        "https://meerzah.pk/cdn/shop/files/bn-697_2.jpg?v=1725007752&width=1024",
     },
     {
       id: 3,
-      name: "Sandalwood Suwanda Kudu",
+      name: "Suwanda Kudu",
       category: "Suwanda Kudu",
       description: "Fragrant Sandalwood cones.",
       price: "$15",
       location: "Sri Lanka",
-      image: "https://img.freepik.com/premium-photo/turmeric-powder-spoon-blue-background_739547-2375.jpg",
+      image:
+        "https://img.freepik.com/premium-photo/turmeric-powder-spoon-blue-background_739547-2375.jpg",
     },
     {
       id: 4,
@@ -40,7 +42,8 @@ const ProductsPage = () => {
       description: "Traditional design with celestial patterns.",
       price: "$150",
       location: "Maldives",
-      image: "https://c4.wallpaperflare.com/wallpaper/130/114/462/seashell-on-the-beach-brown-sea-shell-wallpaper-preview.jpg",
+      image:
+        "https://c4.wallpaperflare.com/wallpaper/130/114/462/seashell-on-the-beach-brown-sea-shell-wallpaper-preview.jpg",
     },
     {
       id: 5,
@@ -49,21 +52,28 @@ const ProductsPage = () => {
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
       location: "Thailand",
-      image: "https://manubhai.in/SocialMedia/post_artworks/Wedding-10-3Jan2023.jpg",
+      image:
+        "https://manubhai.in/SocialMedia/post_artworks/Wedding-10-3Jan2023.jpg",
     },
   ];
 
-  // Filter products based on selected category
-  const filteredProducts = selectedCategory === "All"
-    ? products
-    : products.filter((product) => product.category === selectedCategory);
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
 
   return (
     <div className="products-page">
+      {/* Header Banner */}
       <div className="banner">
-        <h1>Astrological Treasures</h1>
-        <p>Explore sacred Walampuri, mystical Bangals, and aromatic Suwanda Kudu.</p>
+        <h1> Astrological Treasures </h1>
+        <p>
+          Discover rare and sacred Walampuri, elegant Bangals, and Suwanda Kudu
+          crafted with care.
+        </p>
       </div>
+
+      {/* Category Buttons */}
       <div className="category-tabs">
         {["All", "Walampuri", "Bangals", "Suwanda Kudu"].map((category) => (
           <button
@@ -75,24 +85,26 @@ const ProductsPage = () => {
           </button>
         ))}
       </div>
+
+      {/* Product Grid */}
       <div className="product-container">
-        <div className="product-list">
-          {filteredProducts.map((product) => (
-            <div className="product-item" key={product.id}>
-              <div
-                className="product-image"
-                style={{ backgroundImage: `url(${product.image})` }}
-              />
-              <div className="product-content">
-                <h2 className="product-title">{product.name}</h2>
-                <p className="product-description">{product.description}</p>
-                <p className="product-price">Price: {product.price}</p>
-        
-                <button className="buy-button">Buy Now</button>
+        {filteredProducts.map((product) => (
+          <div className="product-item" key={product.id}>
+            <div
+              className="product-image"
+              style={{ backgroundImage: `url(${product.image})` }}
+            ></div>
+            <div className="product-details">
+              <h2>{product.name}</h2>
+              <p>{product.description}</p>
+              <div className="price-location">
+                <span className="price">{product.price}</span>
+                <span className="location">{product.location}</span>
               </div>
+              <button className="buy-button">🛒 Buy Now</button>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

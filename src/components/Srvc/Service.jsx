@@ -1,13 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import "./Service.css";
-import placeholderImage1 from "../../assets/images/src.jpg";
-import placeholderImage2 from "../../assets/images/src.jpg";
-import placeholderImage3 from "../../assets/images/src.jpg";
-import placeholderImage4 from "../../assets/images/src.jpg";
 
 const ServicePage = () => {
   const topSectionRef = useRef(null);
-  const bottomSectionRef = useRef(null);
 
   useEffect(() => {
     const animateOnScroll = (entries, observer) => {
@@ -27,44 +22,15 @@ const ServicePage = () => {
     if (topSectionRef.current) {
       observer.observe(topSectionRef.current);
     }
-    if (bottomSectionRef.current) {
-      observer.observe(bottomSectionRef.current);
-    }
 
     return () => observer.disconnect();
   }, []);
-
-  const services = [
-    {
-      id: 1,
-      title: "Yoga",
-      description: "Relax your body and mind with expert yoga sessions.",
-      image: placeholderImage1,
-    },
-    {
-      id: 2,
-      title: "Washthu",
-      description: "Enhance your living with Washthu-inspired solutions.",
-      image: placeholderImage2,
-    },
-    {
-      id: 3,
-      title: "Psychology",
-      description: "Unlock your potential with our psychology services.",
-      image: placeholderImage3,
-    },
-    {
-      id: 4,
-      title: "Jothishya",
-      description: "Explore your destiny through personalized astrology.",
-      image: placeholderImage4,
-    },
-  ];
 
   return (
     <div className="service-page-container">
       <h1 className="service-header-title">Our Services</h1>
 
+      {/* Top Section */}
       <div
         className="service-top-section animated-section left-to-right"
         ref={topSectionRef}
@@ -86,31 +52,11 @@ const ServicePage = () => {
         </div>
 
         <div className="service-right-column">
-          <img src={placeholderImage1} alt="Expertise" />
+          <img
+            src="https://www.clickastro.com/blog/wp-content/uploads/2021/11/Free-astrology-from-renowned-astrologers.jpg"
+            alt="Expertise"
+          />
         </div>
-      </div>
-
-      <div
-        className="service-bottom-row animated-section right-to-left"
-        ref={bottomSectionRef}
-      >
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className={`service-column service-column-${service.id}`}
-          >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="service-column-image"
-            />
-            <h3 className="service-column-title">{service.title}</h3>
-            <p className="service-column-description">{service.description}</p>
-            <div className="service-read-more">
-              <button className="service-read-more-button">Read More</button>
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
