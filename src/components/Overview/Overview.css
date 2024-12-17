@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+.overview-section {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(184deg, rgba(255, 255, 255, 0.6362920168067228) 0%, rgba(255, 199, 126, 0.502) 100%);
+    padding: 6% 20px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.overview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.overview-card {
+    position: relative;
+    width: 220px;
+    padding: 20px 15px;
+    text-align: center;
+    background: linear-gradient(184deg, #ffffff 0%, rgba(255, 235, 191, 0.4) 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 136, 0, 0.2);
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.overview-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.overview-count {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #686868;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.overview-card:hover .overview-count {
+    color: #ffa200;
+}
+
+.overview-card h5 {
+    font-size: 1rem;
+    color: #525252;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .overview-container {
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+    .overview-card {
+        width: 180px;
+        padding: 15px;
+    }
+    .overview-card img {
+        width: 80px;
+        height: 80px;
+    }
+    .overview-count {
+        font-size: 2rem;
+    }
+    .overview-card h5 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-card {
+        width: 140px;
+        padding: 10px;
+    }
+    .overview-card img {
+        width: 70px;
+        height: 70px;
+    }
+    .overview-count {
+        font-size: 1.6rem;
+    }
+    .overview-card h5 {
+        font-size: 0.8rem;
+    }
+}

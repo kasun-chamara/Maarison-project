@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 .hero-section {
     height: 105vh;
     width: 100vw;
@@ -11,6 +12,7 @@
     margin: 0;
     padding: 0;
     flex-direction: column;
+    font-family: "Poppins", sans-serif;
 }
 
 .hero-content {
@@ -18,7 +20,7 @@
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 700;
     color: #4a4a4a;
     line-height: 1.2;
@@ -26,10 +28,11 @@
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 1rem;
     color: #666666;
     line-height: 1.6;
+    font-weight: 100;
 }
 
 .hero-content .btn {
@@ -45,12 +48,12 @@
 }
 
 .hero-content .btn:hover {
-    transform: translateY(-10px) scale(1.01);
+    transform: translateY(1px) scale(1.01);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     opacity: 1;
     background: linear-gradient(45deg, #ffffff, #ffffff);
     color: #ff6600;
-    border: 1px solid #ff6600;
+    border: 1px solid #303030;
     /* Slightly enlarge on hover */
 }
 

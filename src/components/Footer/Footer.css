@@ -1,173 +1,160 @@
-/* Footer Base Styles */
+/* General Footer Styles */
 
 .footer {
-    position: relative;
-    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
-    color: #ffffff;
-    padding: 80px 0;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #272727;
+    padding: 60px 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    border-top: 1px solid #ffce79;
+    /* Add a top border line */
 }
 
 
-/* Overlay with Glassmorphism */
+/* Footer Container */
 
 .footer-container {
-    position: relative;
-    z-index: 1;
-}
-
-.footer-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
-/* Footer Columns */
+/* Logo and Name Section */
 
-.footer-col {
-    flex: 1 1 220px;
+.footer-left {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 .footer-logo {
-    width: 90px;
-    margin-bottom: 15px;
+    max-width: 80px;
+    align-items: center;
 }
 
-.footer-description {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin-bottom: 15px;
+.footer-name {
+    font-size: 1.5em;
+    color: #272727;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 
-/* Headings */
+/* Quick Links and Contact Section */
 
-.footer h5 {
-    font-size: 18px;
-    color: #ff8c00;
+.footer-right {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.footer-links,
+.footer-contact {
+    flex: 1;
+    max-width: 250px;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    text-align: left;
 }
 
-
-/* Links */
-
-.footer-links {
+.footer-links ul {
     list-style: none;
     padding: 0;
 }
 
 .footer-links li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.9);
+    color: #272727;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #ffcb00;
-    padding-left: 5px;
+    color: #f4a261;
 }
 
-
-/* Contact Info */
-
-.contact-info {
-    list-style: none;
-    padding: 0;
+.footer-contact p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #272727;
 }
 
-.contact-info li {
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.contact-info a {
-    color: #ffcb00;
+.footer-contact a {
+    color: #7483f7;
     text-decoration: none;
 }
 
-
-/* Social Icons */
-
-.social-icons {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 20px;
+.footer-contact a:hover {
+    color: #f4a261;
 }
 
-.social-icons a {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ff8c00;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+
+/* Social Media Icons */
+
+.footer-social {
     display: flex;
-    align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    gap: 25px;
+    margin-top: 30px;
 }
 
-.social-icons a:hover {
-    background: #ffcb00;
-    color: #000;
-    transform: scale(1.1);
+.social-icon {
+    color: #323232;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-
-/* Meet Button */
-
-.btn-meet {
-    background: linear-gradient(135deg, #ffcb30, #ff8a00);
-    color: #000;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 50px;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-meet:hover {
-    background: #e5b800;
-    color: #fff;
-    transform: translateY(-4px);
+.social-icon:hover {
+    color: #ffb300;
+    transform: scale(1.2);
 }
 
 
-/* Footer Bottom */
+/* Footer Bottom Section */
 
 .footer-bottom {
-    margin-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #959595;
+    border-top: 2px solid #f4a261;
+    /* Add a line between content and copyright */
     padding-top: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
 }
 
 
-/* Responsive Styles */
+/* Responsive Design */
 
 @media (max-width: 768px) {
-    .footer-row {
+    .footer-container {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
     }
-    .social-icons {
-        justify-content: center;
+    .footer-left {
+        margin-bottom: 30px;
+        text-align: center;
+        /* Center the name and logo */
+    }
+    .footer-logo {
+        margin: 0 auto;
+    }
+    .footer-right {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links,
+    .footer-contact {
+        margin-bottom: 30px;
     }
 }

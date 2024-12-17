@@ -1,22 +1,17 @@
 import React from "react";
 import "./Summery.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faHeart, faSmile, faThumbsUp, faUsers, faCheckCircle, faHandshake, faClock, faTrophy, faBolt, faGem, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon, faStar, faFire, faLeaf, faGem, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
-const UserFeedbackSection = () => {
+const AstrologyFeedbackSection = () => {
   const wordsWithIcons = [
-    { icon: faStar, word: "Quality" },
-    { icon: faHeart, word: "Passion" },
-    { icon: faSmile, word: "Happiness" },
-    { icon: faThumbsUp, word: "Trust" },
-    { icon: faUsers, word: "Teamwork" },
-    { icon: faCheckCircle, word: "Success" },
-    { icon: faHandshake, word: "Commitment" },
-    { icon: faClock, word: "Timely" },
-    { icon: faTrophy, word: "Excellence" },
-    { icon: faBolt, word: "Efficiency" },
-    { icon: faGem, word: "Innovation" },
-    { icon: faGlobe, word: "Global" },
+    { icon: faSun, word: "Sun" },
+    { icon: faMoon, word: "Moon" },
+    { icon: faStar, word: "Stars" },
+    { icon: faFire, word: "Fire" },
+    { icon: faLeaf, word: "Earth" },
+    { icon: faGem, word: "Mystic" },
+    { icon: faGlobe, word: "Universe" },
   ];
 
   return (
@@ -28,7 +23,6 @@ const UserFeedbackSection = () => {
             <span>{item.word}</span>
           </div>
         ))}
-        {/* Duplicate for continuous scrolling */}
         {wordsWithIcons.map((item, index) => (
           <div className="icon-word-pair" key={`dup-${index}`}>
             <FontAwesomeIcon icon={item.icon} className="icon" />
@@ -40,4 +34,4 @@ const UserFeedbackSection = () => {
   );
 };
 
-export default UserFeedbackSection;
+export default AstrologyFeedbackSection;
