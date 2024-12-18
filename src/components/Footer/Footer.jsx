@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css'; // Ensure the CSS file is correctly imported
-import logo from '../../assets/images/astrology.png'; // Replace with your logo path
+import logo from '../../assets/images/Logo.png'; // Replace with your logo path
 import { FaFacebook, FaWhatsapp, FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {

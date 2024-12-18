@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 .overview-section {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(184deg, rgba(255, 255, 255, 0.6362920168067228) 0%, rgba(255, 199, 126, 0.502) 100%);
-    padding: 6% 20px;
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
+    padding: 3% 20px;
     font-family: "Poppins", sans-serif;
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #ffcb30;
+    border-bottom: 10px solid #e4e4e4;
+    border-top: 10px solid #e4e4e4;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
 }
 
 .overview-wrapper {
@@ -16,6 +18,7 @@
     max-width: 1200px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .overview-container {
@@ -23,90 +26,136 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    align-items: center;
 }
 
 .overview-card {
     position: relative;
-    width: 220px;
+    width: 180px;
+    /* Small card size on PC */
     padding: 20px 15px;
+    /* Slightly reduced padding */
     text-align: center;
-    background: linear-gradient(184deg, #ffffff 0%, rgba(255, 235, 191, 0.4) 100%);
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 136, 0, 0.2);
+    background: linear-gradient(145deg, #ffffff, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
+    overflow: hidden;
 }
 
 .overview-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #f4f4f4, #eaeaea);
 }
 
 .overview-card img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    /* Smaller image size */
+    height: 75px;
+    /* Smaller image size */
     margin-bottom: 15px;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.4s ease;
+}
+
+.overview-card:hover img {
+    transform: scale(1.1);
 }
 
 .overview-count {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    /* Smaller font size */
     font-weight: 600;
-    color: #686868;
-    margin: 10px 0;
-    transition: color 0.3s ease;
+    color: #4a4a4a;
+    margin: 5px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.4s ease, text-shadow 0.4s ease;
 }
 
 .overview-card:hover .overview-count {
-    color: #ffa200;
+    color: #ff6b00;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .overview-card h5 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    /* Reduced font size */
     color: #525252;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+    font-weight: 500;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.4s ease;
 }
 
+.overview-card:hover h5 {
+    color: #ffa200;
+}
 
-/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Adjust for medium to large screens (PC) */
+    .overview-card {
+        width: 160px;
+        /* Smaller width */
+        padding: 18px;
+    }
+    .overview-card img {
+        width: 65px;
+        height: 65px;
+    }
+    .overview-count {
+        font-size: 1.8rem;
+    }
+    .overview-card h5 {
+        font-size: 0.85rem;
+    }
+}
 
 @media (max-width: 768px) {
+    .overview-section {
+        padding: 4% 15px;
+        margin-top: 30px;
+    }
     .overview-container {
-        gap: 20px;
-        padding-bottom: 40px;
+        gap: 15px;
     }
     .overview-card {
-        width: 180px;
+        width: 160px;
         padding: 15px;
     }
     .overview-card img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
     .overview-count {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .overview-card h5 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
+    .overview-section {
+        padding: 3% 10px;
+        margin-top: 20px;
+        padding: 40px;
+    }
+    .overview-container {
+        gap: 10px;
+    }
     .overview-card {
-        width: 140px;
-        padding: 10px;
+        width: 130px;
+        padding: 12px;
     }
     .overview-card img {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     .overview-count {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .overview-card h5 {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }

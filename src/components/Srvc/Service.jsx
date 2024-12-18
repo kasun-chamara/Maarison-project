@@ -17,7 +17,7 @@ const ServicePage = () => {
     };
 
     const observer = new IntersectionObserver(animateOnScroll, {
-      threshold: 0.2, // Start animation when 20% of the element is visible
+      threshold: 0.2,
     });
 
     // Observe the sections
@@ -33,8 +33,13 @@ const ServicePage = () => {
 
   return (
     <div className="service-page-container">
+      <h3 className="section-sub-title1">Exclusive Deals Just for You</h3>
       <h1 className="service-header-title">Our Services</h1>
-
+      <p className="pclass" data-aos="zoom-in">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro temporibus, illum
+        provident impedit incidunt suscipit voluptas recusandae minus. Dignissimos est quidem
+        unde maxime, numquam tenetur ipsum nisi soluta distinctio eius.
+      </p>
       {/* Top Section */}
       <div
         className="service-top-section animated-section left-to-bottom"
@@ -45,11 +50,10 @@ const ServicePage = () => {
           <p>
             We provide cutting-edge solutions to meet your business needs. From
             mobile and web development to cloud solutions, we've got you
-            covered. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            covered.
           </p>
           <div className="service-button-group">
             <a href="#explore">Explore More</a>
-            <a href="#contact">Contact Us</a>
           </div>
         </div>
 
@@ -61,65 +65,55 @@ const ServicePage = () => {
         </div>
       </div>
 
-      {/* Cards Section */}
-      <div
-        className="service-cards-section animated-section left-to-bottom"
-        ref={cardsSectionRef}
-      >
-        <div className="service-card">
-          <img
-            src="https://www.ekhartyoga.com/media/image/articles/Laia_Bove_Mermaid-pose.jpg"
-            alt="Yoga"
-            className="service-card-image"
-          />
-          <h3>Yoga</h3>
-          <p>
-            Explore the harmony of body and mind through Yoga. Enhance physical
-            health, relieve stress, and discover inner peace with personalized
-            sessions tailored to your needs.
-          </p>
+      {/* 1200px and above: Four colored cards */}
+      <div className="service-cards-container" ref={cardsSectionRef}>
+        <div className="service-card card-1">
+          <div className="card-image">
+            <img
+              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
+              alt="Card 1"
+            />
+          </div>
+          <div className="card-content">
+            <h3>Card 1 Title</h3>
+            <p>Some description for Card 1. It explains the content in more detail.</p>
+          </div>
         </div>
-
-        <div className="service-card">
-          <img
-            src="https://www.astrologerpanditnarasimha.com/images/vastu-consultant-astrologer-in-ireland.jpg"
-            alt="Washthu"
-            className="service-card-image"
-          />
-          <h3>Washthu</h3>
-          <p>
-            Discover the ancient principles of Washthu. Optimize your living
-            spaces to balance energies and improve prosperity, health, and
-            well-being.
-          </p>
+        <div className="service-card card-2">
+          <div className="card-image">
+            <img
+              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
+              alt="Card 2"
+            />
+          </div>
+          <div className="card-content">
+            <h3>Card 2 Title</h3>
+            <p>Some description for Card 2. It explains the content in more detail.</p>
+          </div>
         </div>
-
-        <div className="service-card">
-          <img
-            src="https://cdn.psychologytoday.com/sites/default/files/styles/image-article_inline_full_caption/public/field_blog_entry_images/2022-01/black_background.jpg?itok=yS7Q1GW4"
-            alt="Psychology"
-            className="service-card-image"
-          />
-          <h3>Psychology</h3>
-          <p>
-            Understand the human mind with expert psychological guidance. We
-            offer therapy, counseling, and support for mental health and
-            well-being.
-          </p>
+        <div className="service-card card-3">
+          <div className="card-image">
+            <img
+              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
+              alt="Card 3"
+            />
+          </div>
+          <div className="card-content">
+            <h3>Card 3 Title</h3>
+            <p>Some description for Card 3. It explains the content in more detail.</p>
+          </div>
         </div>
-
-        <div className="service-card">
-          <img
-            src="https://media.licdn.com/dms/image/D5612AQHomW5Ao2rFRw/article-cover_image-shrink_600_2000/0/1707915359054?e=2147483647&v=beta&t=ThIg61gsEHEjruEyVE2gYNGDckgnEJ3ySB__fwzsExs"
-            alt="Jothishya"
-            className="service-card-image"
-          />
-          <h3>Jothishya</h3>
-          <p>
-            Unlock the mysteries of your future with Jothishya. Get insights
-            into your destiny, relationships, and career through expert
-            astrological guidance.
-          </p>
+        <div className="service-card card-4">
+          <div className="card-image">
+            <img
+              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
+              alt="Card 4"
+            />
+          </div>
+          <div className="card-content">
+            <h3>Card 4 Title</h3>
+            <p>Some description for Card 4. It explains the content in more detail.</p>
+          </div>
         </div>
       </div>
     </div>

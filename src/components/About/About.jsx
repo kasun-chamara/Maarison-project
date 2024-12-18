@@ -2,13 +2,7 @@ import React, { useEffect } from "react";
 import "aos/dist/aos.css"; // Import AOS styles
 import AOS from "aos"; // Import AOS library
 import "./About.css"; // Custom styles
-import AboutImage from "../../assets/Images/abcdef.png";
-import CardImage1 from "../../assets/Images/abc.png"; // Replace with actual image paths
-import CardImage2 from "../../assets/Images/abc.png";
-import CardImage3 from "../../assets/Images/abc.png";
-import CardImage4 from "../../assets/Images/abc.png";
-import CardImage5 from "../../assets/Images/abc.png";
-import CardImage6 from "../../assets/Images/abc.png";
+import AboutImage from "../../assets/Images/about-image.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -28,50 +22,23 @@ const About = () => {
         unde maxime, numquam tenetur ipsum nisi soluta distinctio eius.
       </p>
 
-      <div className="about-wrapper">
-        {/* Center Image */}
-        <div className="about-image" data-aos="zoom-in">
-          <img src={AboutImage} alt="Main Illustration" />
+      {/* New Image and Content Layout */}
+      <div className="about-container">
+        {/* Left Side Image */}
+        <div className="about-image" data-aos="fade-right">
+          <img src={AboutImage} alt="About Us" />
         </div>
 
-        {/* Cards Around the Image */}
-        <div className="about-card top-left" data-aos="fade-right">
-          <img src={CardImage1} alt="Icon 1" className="card-icon" />
-          <div className="card-content">
-            <p>A calm mind helps you achieve self-realization and inner peace.</p>
-          </div>
-        </div>
-        <div className="about-card top-right" data-aos="fade-left">
-          <img src={CardImage2} alt="Icon 2" className="card-icon" />
-          <div className="card-content">
-            <p>
-              Meditation connects us with the universe by removing mental agitation.
-            </p>
-          </div>
-        </div>
-        <div className="about-card left-center" data-aos="fade-right">
-          <img src={CardImage3} alt="Icon 3" className="card-icon" />
-          <div className="card-content">
-            <p>Empower yourself with balance, harmony, and emotional strength.</p>
-          </div>
-        </div>
-        <div className="about-card right-center" data-aos="fade-left">
-          <img src={CardImage4} alt="Icon 4" className="card-icon" />
-          <div className="card-content">
-            <p>Embrace positivity and develop deeper emotional connections.</p>
-          </div>
-        </div>
-        <div className="about-card bottom-left" data-aos="fade-up-right">
-          <img src={CardImage5} alt="Icon 5" className="card-icon" />
-          <div className="card-content">
-            <p>A peaceful mind is the key to joy, creativity, and resilience.</p>
-          </div>
-        </div>
-        <div className="about-card bottom-right" data-aos="fade-up-left">
-          <img src={CardImage6} alt="Icon 6" className="card-icon" />
-          <div className="card-content">
-            <p>Overcome stress and unlock your full potential with meditation.</p>
-          </div>
+        {/* Right Side Content */}
+        <div className="about-content" data-aos="fade-left">
+          <h3>Our Unique Approach</h3>
+          <p>
+            We believe in delivering exceptional value through innovative solutions that
+            cater to your specific needs. From tailored services to unparalleled support,
+            we ensure customer satisfaction every step of the way.<br></br> <br></br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro temporibus, illum
+        provident impedit incidunt suscipit voluptas recusandae minus. 
+          </p>
+          <button className="discover-more-btn">Discover More</button>
         </div>
       </div>
     </div>
