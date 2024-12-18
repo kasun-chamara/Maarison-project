@@ -36,7 +36,7 @@ const Header = () => {
             <Link
               className={`nav-link ${location.pathname === "/services" ? "active-link" : ""}`}
               to="/services"
-              onClick={handleLinkClick} // Close the menu when clicked
+              onClick={handleLinkClick}
             >
               Services
             </Link>

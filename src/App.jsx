@@ -15,8 +15,8 @@ import ProgramSection from './components/ProgramSection/ProgramSection';
 import MeetMaarisonAcharya from './components/MeetMaarisonAcharya/MeetMaarisonAcharya';
 import Summery from './components/Summery/Summery';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
-import ProductsPage from './components/ProductsPage/ProductsPage'; // New ProductsPage Component
-import YouTubeSection from './components/YouTubeSection/YouTubeSection';
+import ProductsPage from './components/ProductsPage/ProductsPage';
+import ServicesPage from './components/ServicesPage/ServicesPage'; // Import ServicesPage
 import Overview from './components/Overview/Overview';
 
 const App = () => {
@@ -29,21 +29,25 @@ const App = () => {
             <Hero />
             <Summery />
             <About />
-               <Overview />
-            {/* <YouTubeSection /> */}
+            <Overview />
             <Service />
             <ProductSlider />
             <ProgramSection />
             <MeetMaarisonAcharya />
             <Footer />
             <WhatsAppButton />
-         
           </>
         } />
         <Route path="/products" element={
           <>
             <ProductsPage />
-            <Footer />  {/* Add Footer here */}
+            <Footer />
+          </>
+        } />
+        <Route path="/services" element={
+          <>
+            <ServicesPage />
+            <Footer />
           </>
         } />
       </Routes>
