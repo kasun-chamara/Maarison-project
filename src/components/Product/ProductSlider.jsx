@@ -7,6 +7,7 @@ import "./ProductSlider.css";
 import Pcard1 from "../../assets/images/Pcard1.png";
 import Pcard2 from "../../assets/images/Pcard2.png";
 import Pcard3 from "../../assets/images/Pcard3.png";
+import Pcard4 from "../../assets/images/Pcard4.png";
 
 // Product data
 const products = [
@@ -36,6 +37,15 @@ const products = [
     image: Pcard3,
     additionalImage:
       "https://media.istockphoto.com/id/586705490/photo/cocoa-powder-into-a-bowl-and-spoon.jpg?s=612x612&w=is&k=20&c=eb3sRY3398EM4w1MNcqZ71d98pM8bwOQW4Th0d1pmGo=",
+  },
+  {
+    id: 4,
+    name: "Product 4",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed officia minima nesciunt eum ducimus cumque earum.",
+    image: Pcard4,
+    additionalImage:
+      "https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg",
   },
 ];
 
@@ -72,13 +82,11 @@ const ProductSection = () => {
             <div className="svg-container">
               <img src={product.image} alt={product.name} className="product-svg" />
             </div>
-    
+
             <div className="product-header-info">
               <div className="product-name">{product.name}</div>
             </div>
             <p className="product-description">{product.description}</p>
-            
-            {/* Add a button to the bottom-right corner */}
             <button className="product-button">More Info</button>
           </div>
         ))}

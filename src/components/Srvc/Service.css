@@ -90,7 +90,7 @@
 }
 
 
-/* Four Colored Cards Section (For 1200px screens) */
+/* Four Colored Cards Section */
 
 .service-cards-container {
     display: grid;
@@ -98,7 +98,10 @@
     gap: 20px;
     width: 100%;
     max-width: 1125px;
-    margin-top: 40px;
+    ;
+    border: 1px solid #ffe188;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .service-card {
@@ -110,6 +113,15 @@
     justify-content: space-between;
     height: 100%;
     box-shadow: 0 4px 8px rgba(98, 98, 98, 0.1);
+    background: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: #ffdfa8 2px solid;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(98, 98, 98, 0.2);
 }
 
 .service-card .card-image {
@@ -123,6 +135,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-bottom: #ffa200 4px solid;
 }
 
 .service-card .card-content {
@@ -131,15 +144,19 @@
 }
 
 .service-card .card-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 10px 0;
     font-weight: bold;
+    color: #484848;
 }
 
 .service-card .card-content p {
     font-size: .9rem;
     line-height: 1.6;
     color: #484848;
+    font-weight: 100;
+    text-align: justify;
+    padding-bottom: 20px;
 }
 
 
@@ -154,14 +171,6 @@
 .animated-section.animate {
     opacity: 1;
     transform: translateY(0);
-}
-
-.left-to-bottom.animate {
-    transform: translateY(0);
-}
-
-.left-to-bottom {
-    transform: translateY(50px);
 }
 
 
@@ -184,13 +193,35 @@
     .service-header-title {
         font-size: 2rem;
     }
+    .service-cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-@media (max-width: 480px) {
-    .service-header-title {
-        font-size: 2.5rem;
-    }
-    .service-custom-left-class h2 {
-        font-size: 1.5rem;
-    }
+
+/* Button Styling */
+
+.card-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 0.7rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background: #ffa200;
+    transform: scale(1.05);
+}
+
+
+/* Ensure service-card has relative positioning for absolute button placement */
+
+.service-card {
+    position: relative;
 }

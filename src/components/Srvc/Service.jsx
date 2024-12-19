@@ -67,55 +67,60 @@ const ServicePage = () => {
 
       {/* 1200px and above: Four colored cards */}
       <div className="service-cards-container" ref={cardsSectionRef}>
-        <div className="service-card card-1">
-          <div className="card-image">
-            <img
-              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
-              alt="Card 1"
-            />
-          </div>
-          <div className="card-content">
-            <h3>Card 1 Title</h3>
-            <p>Some description for Card 1. It explains the content in more detail.</p>
-          </div>
-        </div>
-        <div className="service-card card-2">
-          <div className="card-image">
-            <img
-              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
-              alt="Card 2"
-            />
-          </div>
-          <div className="card-content">
-            <h3>Card 2 Title</h3>
-            <p>Some description for Card 2. It explains the content in more detail.</p>
-          </div>
-        </div>
-        <div className="service-card card-3">
-          <div className="card-image">
-            <img
-              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
-              alt="Card 3"
-            />
-          </div>
-          <div className="card-content">
-            <h3>Card 3 Title</h3>
-            <p>Some description for Card 3. It explains the content in more detail.</p>
-          </div>
-        </div>
-        <div className="service-card card-4">
-          <div className="card-image">
-            <img
-              src="https://static01.nyt.com/images/2016/12/02/well/move/yoga_body_images-slide-ZRO9/yoga_body_images-slide-ZRO9-jumbo.jpg"
-              alt="Card 4"
-            />
-          </div>
-          <div className="card-content">
-            <h3>Card 4 Title</h3>
-            <p>Some description for Card 4. It explains the content in more detail.</p>
-          </div>
-        </div>
-      </div>
+  <div className="service-card card-1">
+    <div className="card-image">
+      <img
+        src="https://www.ekhartyoga.com/media/image/articles/Laia_Bove_Mermaid-pose.jpg"
+        alt="Card 1"
+      />
+    </div>
+    <div className="card-content">
+      <h3>Card 1 Title</h3>
+      <p>Some description for Card 1. It explains the content in more detail.</p>
+      <a href="#learn-more" className="card-button">Learn More</a>
+    </div>
+  </div>
+  <div className="service-card card-2">
+    <div className="card-image">
+      <img
+        src="https://londonspd.com/blog/wp-content/uploads/2024/03/psychology-overview.jpg"
+        alt="Card 2"
+      />
+    </div>
+    <div className="card-content">
+      <h3>Card 2 Title</h3>
+      <p>Some description for Card 2. It explains the content in more detail.</p>
+      <a href="#learn-more" className="card-button">Learn More</a>
+    </div>
+  </div>
+  <div className="service-card card-3">
+    <div className="card-image">
+      <img
+        src="https://anarghyaa.com/cdn/shop/products/anarghyaa-vastu-consultation_480x480.jpg?v=1576556294"
+        alt="Card 3"
+      />
+    </div>
+    <div className="card-content">
+      <h3>Card 3 Title</h3>
+      <p>Some description for Card 3. It explains the content in more detail.</p>
+      <a href="#learn-more" className="card-button">Learn More</a>
+    </div>
+  </div>
+  <div className="service-card card-4">
+    <div className="card-image">
+      <img
+        src="https://images.lifestyleasia.com/wp-content/uploads/sites/2/2024/10/02102004/daily-horoscope-2-oct-2024-1600x900.jpeg"
+        alt="Card 4"
+      />
+    </div>
+    <div className="card-content">
+      <h3>Card 4 Title</h3>
+      <p>Some description for Card 4. It explains the content in more detail.</p>
+      <a href="#learn-more" className="card-button">Learn More</a>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };

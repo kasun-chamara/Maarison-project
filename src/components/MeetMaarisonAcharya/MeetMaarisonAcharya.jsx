@@ -3,6 +3,8 @@ import "./MeetMaarisonAcharya.css";
 import Contactbg from "../../assets/images/Contactbg.svg";
 import DotsSvg from "../../assets/images/Dots.svg";
 import zodiacIcon from "../../assets/images/zodiac.png";
+import meetImage from "../../assets/images/meet-image.jpg";
+
 
 const MeetMaarisonAcharya = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,11 +68,8 @@ const MeetMaarisonAcharya = () => {
       >
         {/* Left Column */}
         <div className="left-column">
-          <img
-            src="https://www.creativehatti.com/wp-content/uploads/edd/2023/08/Astrology-solution-services-banner-poster-template-3-large.jpg"
-            alt="Astrology Image"
-            className="side-image"
-          />
+         <img src={meetImage} alt="Astrology Image" className="side-image" />
+
         </div>
 
         {/* Right Column */}

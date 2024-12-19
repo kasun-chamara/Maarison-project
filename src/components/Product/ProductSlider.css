@@ -50,14 +50,20 @@
 .product-container-modern {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
     align-items: stretch;
-    margin-top: 20px;
+    margin: 20px auto;
+    /* Centers the container horizontally */
+    border: 1px solid #ffbf00;
+    max-width: 1125px;
+    /* Limits the width for centering */
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .product-card {
-    width: 350px;
+    width: 265px;
     background: linear-gradient(184deg, #ffffff 0%, rgba(255, 235, 191, 0.4) 100%);
     overflow: hidden;
     border: 1px solid rgba(255, 136, 0, 0.2);
@@ -68,7 +74,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     position: relative;
 }
 
@@ -79,7 +85,7 @@
 
 .product-card img.product-additional-image {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
     transition: transform 0.3s ease;
@@ -104,10 +110,10 @@
 }
 
 .product-name {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #6f6f6f;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #484848;
+    margin-bottom: 5px;
     transition: color 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
 }
@@ -115,16 +121,6 @@
 .product-name:hover {
     color: #ff7f50;
     transform: translateY(-3px);
-}
-
-.product-description {
-    font-size: 1rem;
-    color: #666666;
-    text-align: justify;
-    margin: 10px 20px;
-    line-height: 1.6;
-    transition: all 0.3s ease;
-    margin-bottom: 50px;
 }
 
 .svg-container {
@@ -182,8 +178,8 @@
     background: linear-gradient(135deg, #ffcb30, #ff8a00);
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 0.8rem;
+    padding: 8px 15px;
+    font-size: 0.7rem;
     /* Smaller font size */
     font-weight: bold;
     border-radius: 5px;
@@ -198,17 +194,18 @@
 }
 
 .product-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #666666;
     text-align: justify;
-    margin: 10px 20px;
+    margin: 10px 10px;
     line-height: 1.6;
     transition: all 0.3s ease;
     border-bottom: 1px solid #ffd000;
     /* Horizontal line */
     padding-bottom: 30px;
     border-top: 1px solid #dfdfdf;
-    padding-top: 10px;
+    padding-top: 5px;
+    font-weight: 100;
     /* Space between description and line */
 }
 
