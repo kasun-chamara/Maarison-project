@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css'; // Import the CSS file for styling
+import MaarisonHero from '../../assets/images/MR.png'; // Adjust the path as needed
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
           <div className="col-md-6 hero-image">
             <div className="image-wrapper">
               <img
-                src={('Hero2.png')} // Ensure dynamic import
+                src={MaarisonHero} // Use the imported image here
                 alt="Maarison's Wisdom"
                 className="img-fluid"
               />
