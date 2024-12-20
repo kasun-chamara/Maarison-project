@@ -5,6 +5,7 @@ import clientsIcon from "../../assets/images/Clients.svg";
 import servicesIcon from "../../assets/images/Services.svg";
 import productsIcon from "../../assets/images/Product.svg";
 import programIcon from "../../assets/images/Program.svg";
+import overviewImage from "../../assets/images/Overview-image.png";
 
 const Overview = () => {
   const [counts, setCounts] = useState({
@@ -37,6 +38,13 @@ const Overview = () => {
   return (
     <div className="overview-section" ref={ref}>
       <div className="overview-wrapper">
+        <div className="overview-content">
+          <h2 className="overview-title">Our Achievements</h2>
+          <p className="overview-description">
+            We are proud of our accomplishments and the milestones we have achieved. Our dedication to excellence and our commitment to providing top-notch services have earned us the trust and loyalty of our clients.
+          </p>
+         
+        </div>
         <div className="overview-container">
           <div className="overview-card">
             <img src={clientsIcon} alt="Clients" />
@@ -58,6 +66,7 @@ const Overview = () => {
             <p className="overview-count">{counts.programs}</p>
             <h5>Programs</h5>
           </div>
+          
         </div>
       </div>
     </div>
