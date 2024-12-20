@@ -112,7 +112,7 @@
 }
 
 .product-image {
-    height: 180px;
+    height: 200px;
     background-size: cover;
     background-position: center;
 }
@@ -156,7 +156,7 @@
     color: #fff;
     padding: 8px 16px;
     border: none;
-    border-radius: 20px;
+    border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
@@ -199,7 +199,7 @@
     }
     .product-container {
         grid-template-columns: 1fr;
-        padding: 30px;
+        padding: 20px;
         /* 1 card per row */
     }
     /* Category Tabs */
@@ -217,6 +217,6 @@
     }
     /* Add padding on left and right for mobile screens */
     .products-page {
-        padding: 3px;
+        padding: 20px;
     }
 }

@@ -1,5 +1,25 @@
 import React, { useState } from "react";
 import "./ProductsPage.css";
+import BangalsImage from "../../assets/images/Bangals-01.png";
+import BangalsImage02 from "../../assets/images/Bangals-02.png";
+import BangalsImage03 from "../../assets/images/Bangals-03.png";
+import BangalsImage04 from "../../assets/images/Bangals-04.png";
+import BangalsImage05 from "../../assets/images/Bangals-05.png";
+import BangalsImage06 from "../../assets/images/Bangals-06.png";
+import BangalsImage07 from "../../assets/images/Bangals-07.png";
+import BangalsImage08 from "../../assets/images/Bangals-08.png";
+import BangalsImage09 from "../../assets/images/Bangals-09.png";
+import BangalsImage10 from "../../assets/images/Bangals-10.png";
+
+import walampuri01 from "../../assets/images/walampuri-01.png";
+import walampuri02 from "../../assets/images/walampuri-02.png";
+import walampuri03 from "../../assets/images/walampuri-03.png";
+import walampuri04 from "../../assets/images/walampuri-04.png";
+
+import Books01 from "../../assets/images/Book-01.png";
+import Books02 from "../../assets/images/Book-02.png";
+import Books03 from "../../assets/images/Book-03.png";
+import Books04 from "../../assets/images/Book-04.png";
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -12,8 +32,7 @@ const ProductsPage = () => {
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
       location: "Sri Lanka",
-      image:
-        "https://media.istockphoto.com/id/494162338/photo/seashell-on-the-beach.jpg?s=612x612&w=is&k=20&c=0CJs2JnlLTgSZmpWmRKuZNRBY3wxpbThXwpeGGVI8Ok=",
+      image: walampuri01,
     },
     {
       id: 2,
@@ -22,8 +41,7 @@ const ProductsPage = () => {
       description: "Mystical silver Bangal.",
       price: "$80",
       location: "India",
-      image:
-        "https://meerzah.pk/cdn/shop/files/bn-697_2.jpg?v=1725007752&width=1024",
+      image: BangalsImage,
     },
     {
       id: 3,
@@ -35,26 +53,152 @@ const ProductsPage = () => {
       image:
         "https://img.freepik.com/premium-photo/turmeric-powder-spoon-blue-background_739547-2375.jpg",
     },
+     {
+      id: 19,
+      name: "Traditional Book",
+      category: "Books",
+      description: "Traditional design with celestial patterns.",
+      price: "$150",
+      location: "Maldives",
+      image: Books04,
+    },
+
     {
-      id: 4,
+      id: 5,
       name: "Traditional Walampuri",
       category: "Walampuri",
       description: "Traditional design with celestial patterns.",
       price: "$150",
       location: "Maldives",
-      image:
-        "https://c4.wallpaperflare.com/wallpaper/130/114/462/seashell-on-the-beach-brown-sea-shell-wallpaper-preview.jpg",
+      image: walampuri02,
     },
     {
-      id: 5,
+      id: 6,
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
       location: "Thailand",
-      image:
-        "https://manubhai.in/SocialMedia/post_artworks/Wedding-10-3Jan2023.jpg",
+      image: BangalsImage03,
     },
+    {
+      id: 7,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage02,
+    },    {
+      id: 4,
+      name: "Traditional Book",
+      category: "Books",
+      description: "Traditional design with celestial patterns.",
+      price: "$150",
+      location: "Maldives",
+      image: Books01,
+    },
+    {
+      id: 8,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage04,
+    },
+    {
+      id: 9,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage05,
+    },
+    {
+      id: 10,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage06,
+    },
+    {
+      id: 11,
+      name: "Golden Walampuri",
+      category: "Walampuri",
+      description: "Sacred and auspicious Walampuri.",
+      price: "$120",
+      location: "Sri Lanka",
+      image: walampuri04,
+    },
+    {
+      id: 12,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage07,
+    },
+       {
+      id: 18,
+      name: "Traditional Book",
+      category: "Books",
+      description: "Traditional design with celestial patterns.",
+      price: "$150",
+      location: "Maldives",
+      image: Books03,
+    },
+    {
+      id: 13,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage08,
+    },
+    {
+      id: 14,
+      name: "Golden Walampuri",
+      category: "Walampuri",
+      description: "Sacred and auspicious Walampuri.",
+      price: "$120",
+      location: "Sri Lanka",
+      image: walampuri03,
+    },
+    {
+      id: 15,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage09,
+    },
+    {
+      id: 16,
+      name: "Gemstone Bangal",
+      category: "Bangals",
+      description: "Gemstone-encrusted Bangal.",
+      price: "$200",
+      location: "Thailand",
+      image: BangalsImage10,
+    },
+     {
+      id: 17,
+      name: "Traditional Book",
+      category: "Books",
+      description: "Traditional design with celestial patterns.",
+      price: "$150",
+      location: "Maldives",
+      image: Books02,
+    },
+  
+   
   ];
 
   const filteredProducts =
@@ -66,7 +210,7 @@ const ProductsPage = () => {
     <div className="products-page">
       {/* Header Banner */}
       <div className="banner">
-        <h1> Astrological Treasures </h1>
+        <h1>Astrological Treasures</h1>
         <p>
           Discover rare and sacred Walampuri, elegant Bangals, and Suwanda Kudu
           crafted with care.
@@ -75,7 +219,7 @@ const ProductsPage = () => {
 
       {/* Category Buttons */}
       <div className="category-tabs">
-        {["All", "Walampuri", "Bangals", "Suwanda Kudu"].map((category) => (
+        {["All", "Walampuri", "Bangals", "Suwanda Kudu", "Books"].map((category) => (
           <button
             key={category}
             className={`category-tab ${selectedCategory === category ? "active" : ""}`}
