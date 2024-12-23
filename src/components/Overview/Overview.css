@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* General Section Styling */
+
 .overview-section {
     background: linear-gradient(135deg, #ffcb30, #ff8a00);
     padding: 3% 20px;
@@ -6,12 +9,75 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #e4e4e4;
     border-top: 10px solid #e4e4e4;
+    border-bottom: 10px solid #e4e4e4;
+    border-top-width: 10px;
     overflow: hidden;
     position: relative;
     margin-top: 20px;
+    z-index: 1;
 }
+
+
+/* Position the comma image */
+
+.comma-image {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 500px;
+    height: 400px;
+    z-index: -1;
+    opacity: .1;
+    /* Increase opacity to make it more visible */
+}
+
+
+/* Animated Images */
+
+.animated-image-left,
+.animated-image-right {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: auto;
+    animation: moveDown 10s infinite;
+}
+
+.animated-image-left {
+    left: 0;
+}
+
+.animated-image-right {
+    right: 0;
+    animation-duration: 15s;
+}
+
+.solar-system-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
+    animation: moveDown 25s infinite;
+    z-index: -1;
+}
+
+@keyframes moveDown {
+    0% {
+        top: -100px;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+
+/* Overview Content Styling */
 
 .overview-wrapper {
     width: 100%;
@@ -20,12 +86,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     text-align: center;
-}
-
-.overview-content {
-    margin-bottom: 40px;
+    position: relative;
 }
 
 .overview-title {
@@ -40,38 +102,60 @@
     color: #3c3c3c;
     margin-bottom: 40px;
     font-weight: 100;
-    width: 100%;
     max-width: 800px;
 }
 
-.overview-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
+
+/* Feedback Card Styling */
+
+.feedback-card {
+    width: 700px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #ffd166);
+    border-radius: 20px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
+    margin: 10px;
 }
 
-.overview-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    object-fit: cover;
+.feedback-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #f4f4f4, #eaeaea);
+}
+
+.feedback-image {
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    /* Make the image round */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add shadow */
+    margin-bottom: 15px;
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.4s ease;
 }
 
-.overview-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+.feedback-card:hover .feedback-image {
+    transform: scale(1.1);
 }
+
+.feedback-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+
+.feedback-comment {
+    font-size: 1rem;
+    color: #525252;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+
+/* Overview Cards Styling */
 
 .overview-card {
-    position: relative;
     width: 180px;
     padding: 20px 15px;
     text-align: center;
@@ -79,7 +163,19 @@
     border-radius: 20px;
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
-    overflow: hidden;
+    animation: moveRightToLeft 2s infinite;
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .overview-card:hover {
@@ -88,25 +184,12 @@
     background: linear-gradient(145deg, #f4f4f4, #eaeaea);
 }
 
-.overview-card img {
-    width: 75px;
-    height: 75px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.2));
-    transition: transform 0.4s ease;
-}
-
-.overview-card:hover img {
-    transform: scale(1.1);
-}
-
 .overview-count {
     font-size: 2rem;
     font-weight: 600;
     color: #4a4a4a;
     margin: 5px 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: color 0.4s ease, text-shadow 0.4s ease;
 }
 
 .overview-card:hover .overview-count {
@@ -114,81 +197,66 @@
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-.overview-card h5 {
-    font-size: 0.9rem;
-    color: #525252;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.4s ease;
-}
 
-.overview-card:hover h5 {
-    color: #ffa200;
-}
+/* Responsive Design */
 
 @media (max-width: 1024px) {
     .overview-card {
         width: 160px;
         padding: 18px;
     }
-    .overview-card img {
-        width: 65px;
-        height: 65px;
-    }
     .overview-count {
         font-size: 1.8rem;
-    }
-    .overview-card h5 {
-        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 768px) {
     .overview-section {
         padding: 4% 15px;
-        margin-top: 30px;
-    }
-    .overview-container {
-        gap: 15px;
     }
     .overview-card {
-        width: 160px;
+        width: 140px;
         padding: 15px;
     }
-    .overview-card img {
-        width: 60px;
-        height: 60px;
-    }
     .overview-count {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
-    .overview-card h5 {
-        font-size: 0.8rem;
+    .comma-image {
+        position: absolute;
+        top: 10px;
+        right: -30px;
+        width: 300px;
+        height: 200px;
+        z-index: -1;
+        opacity: .1;
+        /* Increase opacity to make it more visible */
     }
 }
 
 @media (max-width: 480px) {
     .overview-section {
-        padding: 3% 10px;
+        padding: 20px;
         margin-top: 20px;
-        padding: 40px;
     }
     .overview-container {
         gap: 10px;
     }
     .overview-card {
-        width: 130px;
-        padding: 12px;
+        width: 120px;
+        padding: 10px;
     }
-    .overview-card img {
-        width: 50px;
-        height: 50px;
-    }
-    .overview-count {
-        font-size: 1.5rem;
-    }
-    .overview-card h5 {
-        font-size: 0.7rem;
-    }
+}
+
+
+/* Include these if not already added */
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

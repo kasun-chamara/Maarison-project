@@ -214,7 +214,7 @@
 
 @media (max-width: 1024px) {
     .product-card {
-        width: 300px;
+        width: 370px;
         /* Reduce width for tablet */
         padding: 10px;
     }
@@ -263,7 +263,7 @@
 
 @media (max-width: 480px) {
     .product-card {
-        width: 100%;
+        width: 150%;
         /* Ensure card takes full width on small screens */
         margin-bottom: 15px;
         /* Add spacing between cards */

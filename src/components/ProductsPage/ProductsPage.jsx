@@ -31,7 +31,7 @@ const ProductsPage = () => {
       category: "Walampuri",
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
-      location: "Sri Lanka",
+
       image: walampuri01,
     },
     {
@@ -40,7 +40,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Mystical silver Bangal.",
       price: "$80",
-      location: "India",
+
       image: BangalsImage,
     },
     {
@@ -49,7 +49,7 @@ const ProductsPage = () => {
       category: "Suwanda Kudu",
       description: "Fragrant Sandalwood cones.",
       price: "$15",
-      location: "Sri Lanka",
+   
       image:
         "https://img.freepik.com/premium-photo/turmeric-powder-spoon-blue-background_739547-2375.jpg",
     },
@@ -59,7 +59,7 @@ const ProductsPage = () => {
       category: "Books",
       description: "Traditional design with celestial patterns.",
       price: "$150",
-      location: "Maldives",
+
       image: Books04,
     },
 
@@ -69,7 +69,7 @@ const ProductsPage = () => {
       category: "Walampuri",
       description: "Traditional design with celestial patterns.",
       price: "$150",
-      location: "Maldives",
+
       image: walampuri02,
     },
     {
@@ -78,7 +78,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+     
       image: BangalsImage03,
     },
     {
@@ -87,7 +87,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+
       image: BangalsImage02,
     },    {
       id: 4,
@@ -95,7 +95,7 @@ const ProductsPage = () => {
       category: "Books",
       description: "Traditional design with celestial patterns.",
       price: "$150",
-      location: "Maldives",
+
       image: Books01,
     },
     {
@@ -104,7 +104,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+    
       image: BangalsImage04,
     },
     {
@@ -113,7 +113,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+ 
       image: BangalsImage05,
     },
     {
@@ -122,7 +122,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+    
       image: BangalsImage06,
     },
     {
@@ -131,7 +131,7 @@ const ProductsPage = () => {
       category: "Walampuri",
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
-      location: "Sri Lanka",
+   
       image: walampuri04,
     },
     {
@@ -140,7 +140,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+
       image: BangalsImage07,
     },
        {
@@ -149,7 +149,7 @@ const ProductsPage = () => {
       category: "Books",
       description: "Traditional design with celestial patterns.",
       price: "$150",
-      location: "Maldives",
+      
       image: Books03,
     },
     {
@@ -158,7 +158,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+     
       image: BangalsImage08,
     },
     {
@@ -167,7 +167,7 @@ const ProductsPage = () => {
       category: "Walampuri",
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
-      location: "Sri Lanka",
+   
       image: walampuri03,
     },
     {
@@ -176,7 +176,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+     
       image: BangalsImage09,
     },
     {
@@ -185,7 +185,7 @@ const ProductsPage = () => {
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
       price: "$200",
-      location: "Thailand",
+     
       image: BangalsImage10,
     },
      {
@@ -194,7 +194,7 @@ const ProductsPage = () => {
       category: "Books",
       description: "Traditional design with celestial patterns.",
       price: "$150",
-      location: "Maldives",
+      
       image: Books02,
     },
   
@@ -243,9 +243,14 @@ const ProductsPage = () => {
               <p>{product.description}</p>
               <div className="price-location">
                 <span className="price">{product.price}</span>
-                <span className="location">{product.location}</span>
+             <button className="buy-button" >
+  <i className="fa fa-shopping-cart" style={{ fontSize: '15px', paddingRight: '10px',}}></i> Buy Now
+</button>
               </div>
-              <button className="buy-button">🛒 Buy Now</button>
+         
+
+
+
             </div>
           </div>
         ))}
