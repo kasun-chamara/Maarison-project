@@ -19,11 +19,13 @@ import ProductsPage from './components/ProductsPage/ProductsPage';
 import ServicesPage from './components/ServicesPage/ServicesPage'; // Import ServicesPage
 import Overview from './components/Overview/Overview';
 import YouTubeSection from './components/YouTubeSection/YouTubeSection';
+import FallingIcons from './components/FallingIcons/FallingIcons';
 
 const App = () => {
   return (
     <Router>
       <Header />
+     <FallingIcons />
       <Routes>
         <Route path="/" element={
           <>
@@ -38,6 +40,7 @@ const App = () => {
             <MeetMaarisonAcharya />
             <Footer />
             <WhatsAppButton />
+           
           </>
         } />
         <Route path="/products" element={

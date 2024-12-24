@@ -1,0 +1,35 @@
+.falling-icons-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    /* Allow interactions with underlying content */
+    z-index: 9999;
+    /* Ensure it appears above all content */
+    overflow: hidden;
+}
+
+.falling-icon {
+    position: absolute;
+    top: -50px;
+    /* Start above the viewport */
+    font-size: .9rem;
+    /* Icon size */
+    color: #ffae00;
+    /* Icon color */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        /* Move to the bottom of the viewport */
+        opacity: 0;
+    }
+}
