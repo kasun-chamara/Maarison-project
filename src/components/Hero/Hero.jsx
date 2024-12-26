@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Hero.css';
-import MaarisonHero from '../../assets/images/MR.png';
+
 import LogoImage from '../../assets/images/logo-2.jpg'; // Import the image here
 
 const Hero = () => {
