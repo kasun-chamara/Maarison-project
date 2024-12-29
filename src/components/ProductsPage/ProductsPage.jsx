@@ -215,6 +215,7 @@ const ProductsPage = () => {
           Discover rare and sacred Walampuri, elegant Bangals, and Suwanda Kudu
           crafted with care.
         </p>
+            {/* <button className="buy-button2" >Subscribe</button> */}
       </div>
 
       {/* Category Buttons */}

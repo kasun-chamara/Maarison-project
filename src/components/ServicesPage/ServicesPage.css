@@ -13,7 +13,7 @@
 }
 
 body {
-    background: rgba(255, 217, 147, 0.1);
+    background: rgba(255, 168, 6, 0.1);
     /* Light overlay for better readability */
     z-index: -1;
 }
@@ -88,7 +88,7 @@ body {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #333333;
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
@@ -189,7 +189,9 @@ body {
 }
 
 .banner1 {
-    background: linear-gradient(135deg, #ff9868, #fdbb2d);
+    background: url("https://img.freepik.com/free-vector/red-business-abstract-banner-background-with-fluid-gradient-wavy-shapes-vector-design-post_1340-22793.jpg") no-repeat center center;
+    /* Set background image */
+    background-size: cover;
     color: #333;
     padding: 40px;
     margin: 0 auto 30px;
@@ -198,6 +200,18 @@ body {
     text-align: center;
     max-width: 1080px;
     width: 90%;
+}
+
+.bannerh1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.bannerp {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 500;
 }
 
 
@@ -214,10 +228,13 @@ body {
     }
     .banner1 h1 {
         font-size: 2rem;
-        margin-top: 60px;
+        text-align: center;
+        margin-top: 40px;
     }
     .banner1 p {
-        font-size: 14px;
+        font-size: 1rem;
+        margin-top: 10px;
+        font-weight: 300;
     }
 }
 

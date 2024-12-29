@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import './ServicesPage.css';
 
 const ServicesPage = () => {
-  const [bannerContent, setBannerContent] = useState({
-    title: "Astrological Treasures",
-    description:
-      "Discover rare and sacred Walampuri, elegant Bangals, and Suwanda Kudu crafted with care.",
-  });
-
   const services = [
     {
       id: 1,
@@ -45,10 +39,14 @@ const ServicesPage = () => {
 
   return (
     <div>
-      {/* Banner Section */}
+      {/* Updated Banner Section */}
       <div className="banner1">
-        <h1>{bannerContent.title}</h1>
-        <p>{bannerContent.description}</p>
+        <h1 className='bannerh1'>Our Services</h1>
+        <p>
+We provide cutting-edge solutions to meet your business needs. From mobile and web development to cloud solutions, we've got you covered.
+        </p>
+        {/* Uncomment the button below if needed */}
+        {/* <button className="buy-button2">Subscribe</button> */}
       </div>
 
       {/* Services Section */}
@@ -59,9 +57,6 @@ const ServicesPage = () => {
               index % 2 !== 0 ? "services-page-row-reverse" : ""
             }`}
             key={service.id}
-            onMouseEnter={() =>
-              setBannerContent({ title: service.title, description: service.description })
-            }
           >
             <div className="services-page-column services-page-column-left">
               <img

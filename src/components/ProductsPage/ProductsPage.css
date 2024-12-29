@@ -27,7 +27,6 @@
 /* Header Banner */
 
 .banner {
-    background: linear-gradient(135deg, #ff9868, #fdbb2d);
     color: #333;
     padding: 40px;
     margin: 0 auto 30px;
@@ -39,18 +38,22 @@
     max-width: 100%;
     /* Make it responsive on smaller screens */
     text-align: center;
-    /* Optional: Center text content */
+    background: url("https://img.freepik.com/free-vector/red-business-abstract-banner-background-with-fluid-gradient-wavy-shapes-vector-design-post_1340-22793.jpg") no-repeat center center;
+    /* Set background image */
+    background-size: cover;
+    /* Make the image cover the entire element */
 }
 
 .banner h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin: 0;
+    font-weight: 700;
 }
 
 .banner p {
     font-size: 1rem;
     opacity: 0.8;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 
