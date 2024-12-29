@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Hero.css';
 
-import LogoImage from '../../assets/images/logo-2.jpg'; // Import the image here
+import LogoImage from '../../assets/images/logo-2.jpg';
+import MaarisonHero from '../../assets/images/MR.png'; // Import the image here
 
 const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
