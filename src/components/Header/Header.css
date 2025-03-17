@@ -1,5 +1,4 @@
 /* General Reset */
-
 * {
     margin: 0;
     padding: 0;
@@ -10,54 +9,56 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-
 /* Navbar Styling */
-
 .custom-navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #fff;
+    background-color: #fff7e2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, top 0.3s ease;
+    border-radius: 20px;
+    position: fixed; /* Position the navbar fixed */
+    top: 10px; /* Adjust the top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 100px); /* Adjust the width to fit within the margins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Reduce the padding to decrease the height */
+}
+
+.custom-navbar.hidden {
+    top: -100px; /* Hide the navbar by moving it up */
+}
+
+.custom-navbar.visible {
+    top: 10px; /* Show the navbar by moving it back to its original position */
 }
 
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 60px;
+    padding: 0 40px; /* Reduce the padding to decrease the height */
     max-width: 1200px;
-    margin: 0 auto;
     width: 100%;
 }
 
-
 /* Logo Styling */
-
 .logo img {
-    height: 50px;
+    height: 40px; /* Reduce the logo height */
     width: auto;
 }
 
-
-/* Center the Navigation Links */
-
+/* Navigation Links */
 .nav-links {
     display: flex;
     list-style: none;
     justify-content: center;
-    /* Center the links */
     flex: 1;
     gap: 30px;
-    /* Add spacing between the links */
     margin: 0;
-    /* Ensure there is no extra margin on the links container */
 }
-
-
-/* Styling individual Navigation Links */
 
 .nav-link {
     text-decoration: none;
@@ -71,154 +72,53 @@ body {
     position: relative;
 }
 
-
-/* Hover & Active Link Effects */
-
 .nav-link:hover,
-.nav-link.active-link {
+.nav-link.active {
     color: #ff8a00;
     transform: translateY(-3px);
     border-bottom: 2px solid #ff8a00;
-    /* Add a nice underline effect on hover */
 }
 
-
-/* Extras (Search & Notifications) */
-
-.extras {
+/* Call Me Button */
+.call-me-button {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
-
-/* Search Bar Styling */
-
-.search-bar {
-    position: relative;
-}
-
-.search-bar input {
-    padding: 8px 20px;
-    padding-right: 40px;
-    /* Keep space for the icon */
-    border-radius: 30px;
-    border: 1px solid #ffb300e3;
-    transition: all 0.3s ease;
-    width: 250px;
-    /* Increased width for better user experience */
-}
-
-.search-bar input:focus {
-    border-color: #ff8a00;
-    box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
-    outline: none;
-}
-
-
-/* Search Icon Styling */
-
-.search-icon {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+.button {
     background-color: #ff8a00;
-    border-radius: 50%;
-    padding: 8px;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.375rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 35px;
-    text-align: center;
-    padding: 4px;
+    transition: background-color 0.3s;
 }
 
-.search-icon:hover {
-    background-color: #e07c00;
+.button:hover {
+    background-color: #8e8e8e;
 }
 
-
-/* Notification Icon Styling */
-
-.notification-icon {
-    font-size: 22px;
-    color: #555;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.notification-icon:hover {
-    color: #ff8a00;
-    transform: scale(1.1);
-    /* Slight zoom effect */
-}
-
-
-/* Hamburger Menu Container */
-
-.hamburger-container {
-    display: none;
-    margin-top: 20px;
-    /* Adjust the margin as needed */
-}
-
-@media (max-width: 992px) {
-    /* Show the hamburger menu on smaller screens */
-    .hamburger-container {
-        display: block;
-        margin-top: 1px;
-        /* Adjust the margin as needed */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .custom-navbar {
+        width: calc(100% - 60px); /* Adjust the width for smaller screens */
     }
-    /* Navigation Links on smaller screens */
     .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
         flex-direction: column;
-        display: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Align the links to the left by default */
-        justify-content: flex-start;
-        padding: 5px 0;
-        /* Add padding for spacing */
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
     }
-    /* Display the navigation links when hamburger menu is open */
-    .nav-links.show {
+    .call-me-button {
+        margin-top: 1rem;
+        width: 100%;
         display: flex;
+        justify-content: center;
     }
-    .nav-links li {
-        margin: 10px 0;
-        text-align: left;
-        /* Align text to the left */
-        padding-left: 30px;
-        /* Add padding for better spacing */
-    }
-}
-
-
-/* Responsive Adjustments */
-
-@media (max-width: 576px) {
-    .logo img {
-        height: 40px;
-    }
-    .search-bar input {
-        width: 180px;
-        padding-right: 40px;
-    }
-    .extras {
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-    }
-    .notification-icon {
-        margin-right: 15px;
-    }
-    .navbar-container {
-        padding: 10px 20px;
+    .button {
+        width: 90%;
     }
 }

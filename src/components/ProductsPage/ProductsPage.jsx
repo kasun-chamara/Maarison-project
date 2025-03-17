@@ -31,7 +31,6 @@ const ProductsPage = () => {
       category: "Walampuri",
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
-
       image: walampuri01,
     },
     {
@@ -39,8 +38,7 @@ const ProductsPage = () => {
       name: "Silver Bangal",
       category: "Bangals",
       description: "Mystical silver Bangal.",
-      price: "$80",
-
+      price: "4800 LKR",
       image: BangalsImage,
     },
     {
@@ -49,27 +47,23 @@ const ProductsPage = () => {
       category: "Suwanda Kudu",
       description: "Fragrant Sandalwood cones.",
       price: "$15",
-   
       image:
         "https://img.freepik.com/premium-photo/turmeric-powder-spoon-blue-background_739547-2375.jpg",
     },
-     {
+    {
       id: 19,
       name: "Traditional Book",
       category: "Books",
       description: "Traditional design with celestial patterns.",
-      price: "$150",
-
+      price: "6400 LKR",
       image: Books04,
     },
-
     {
       id: 5,
       name: "Traditional Walampuri",
       category: "Walampuri",
       description: "Traditional design with celestial patterns.",
       price: "$150",
-
       image: walampuri02,
     },
     {
@@ -77,8 +71,7 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-     
+      price: "4800 LKR",
       image: BangalsImage03,
     },
     {
@@ -86,16 +79,15 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-
+      price: "4800 LKR",
       image: BangalsImage02,
-    },    {
+    },
+    {
       id: 4,
       name: "Traditional Book",
       category: "Books",
       description: "Traditional design with celestial patterns.",
-      price: "$150",
-
+      price: "6400 LKR",
       image: Books01,
     },
     {
@@ -103,8 +95,7 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-    
+      price: "4800 LKR",
       image: BangalsImage04,
     },
     {
@@ -112,8 +103,7 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
- 
+      price: "4800 LKR",
       image: BangalsImage05,
     },
     {
@@ -121,8 +111,7 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-    
+      price: "4800 LKR",
       image: BangalsImage06,
     },
     {
@@ -131,7 +120,6 @@ const ProductsPage = () => {
       category: "Walampuri",
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
-   
       image: walampuri04,
     },
     {
@@ -139,17 +127,15 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-
+      price: "4800 LKR",
       image: BangalsImage07,
     },
-       {
+    {
       id: 18,
       name: "Traditional Book",
       category: "Books",
       description: "Traditional design with celestial patterns.",
-      price: "$150",
-      
+      price: "6400 LKR",
       image: Books03,
     },
     {
@@ -157,8 +143,7 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-     
+      price: "4800 LKR",
       image: BangalsImage08,
     },
     {
@@ -167,7 +152,6 @@ const ProductsPage = () => {
       category: "Walampuri",
       description: "Sacred and auspicious Walampuri.",
       price: "$120",
-   
       image: walampuri03,
     },
     {
@@ -175,8 +159,7 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-     
+      price: "4800 LKR",
       image: BangalsImage09,
     },
     {
@@ -184,21 +167,17 @@ const ProductsPage = () => {
       name: "Gemstone Bangal",
       category: "Bangals",
       description: "Gemstone-encrusted Bangal.",
-      price: "$200",
-     
+      price: "4800 LKR",
       image: BangalsImage10,
     },
-     {
+    {
       id: 17,
       name: "Traditional Book",
       category: "Books",
       description: "Traditional design with celestial patterns.",
-      price: "$150",
-      
+      price: "6400 LKR",
       image: Books02,
     },
-  
-   
   ];
 
   const filteredProducts =
@@ -215,20 +194,39 @@ const ProductsPage = () => {
           Discover rare and sacred Walampuri, elegant Bangals, and Suwanda Kudu
           crafted with care.
         </p>
-            {/* <button className="buy-button2" >Subscribe</button> */}
+      </div>
+
+      {/* Product Prices */}
+      <div className="product-prices">
+        <div className="price-item">
+          <strong>Bangals (any):</strong> 4800 LKR
+        </div>
+        <div className="price-item">
+          <strong>Books:</strong> 6400 LKR
+        </div>
+        <div className="price-item">
+          <strong>Sambrani:</strong> 390 LKR
+        </div>
+        <div className="price-item">
+          <strong>Walampuri (starting price):</strong> from 13000 LKR
+        </div>
       </div>
 
       {/* Category Buttons */}
       <div className="category-tabs">
-        {["All", "Walampuri", "Bangals", "Suwanda Kudu", "Books"].map((category) => (
-          <button
-            key={category}
-            className={`category-tab ${selectedCategory === category ? "active" : ""}`}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
+        {["All", "Walampuri", "Bangals", "Suwanda Kudu", "Books"].map(
+          (category) => (
+            <button
+              key={category}
+              className={`category-tab ${
+                selectedCategory === category ? "active" : ""
+              }`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          )
+        )}
       </div>
 
       {/* Product Grid */}
@@ -241,17 +239,13 @@ const ProductsPage = () => {
             ></div>
             <div className="product-details">
               <h2>{product.name}</h2>
-              <p>{product.description}</p>
-              <div className="price-location">
-                <span className="price">{product.price}</span>
-             <button className="buy-button" >
-  <i className="fa fa-shopping-cart" style={{ fontSize: '15px', paddingRight: '10px',}}></i> Buy Now
-</button>
-              </div>
-         
-
-
-
+              <button className="buy-button">
+                <i
+                  className="fa fa-shopping-cart"
+                  style={{ fontSize: "15px", paddingRight: "10px" }}
+                ></i>{" "}
+                Buy Now
+              </button>
             </div>
           </div>
         ))}

@@ -18,7 +18,6 @@
     z-index: 1;
 }
 
-
 /* Position the comma image */
 
 .comma-image {
@@ -31,7 +30,6 @@
     opacity: .1;
     /* Increase opacity to make it more visible */
 }
-
 
 /* Animated Images */
 
@@ -76,7 +74,6 @@
     }
 }
 
-
 /* Overview Content Styling */
 
 .overview-wrapper {
@@ -98,13 +95,39 @@
 }
 
 .overview-description {
-    font-size: 1rem;
-    color: #3c3c3c;
-    margin-bottom: 40px;
-    font-weight: 100;
+    font-size: 1.5rem;
+    color: #390000;
+    margin-bottom: 20px;
+    font-weight: 700;
     max-width: 800px;
 }
 
+.overview-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: #290000;
+    font-weight: 500;
+    max-width: 800px;
+    text-align: left;
+    align-items: center;
+    
+}
+
+.overview-points li {
+    margin-bottom: 10px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.point-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
 
 /* Feedback Card Styling */
 
@@ -152,7 +175,6 @@
     margin: 10px 0;
 }
 
-
 /* Overview Cards Styling */
 
 .overview-card {
@@ -196,7 +218,6 @@
     color: #ff6b00;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Responsive Design */
 
@@ -246,7 +267,6 @@
         padding: 10px;
     }
 }
-
 
 /* Include these if not already added */
 

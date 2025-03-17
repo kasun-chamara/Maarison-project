@@ -1,15 +1,11 @@
 /* General Settings */
-
 html {
     scroll-behavior: smooth;
 }
 
-
-/* Custom Row */
-
+/* Custom Row - Three Columns in One Row */
 .custom-row {
     display: flex;
-    padding: 0px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -18,132 +14,42 @@ html {
     background: url('../../assets/images/programbg.png') no-repeat center center/cover;
     padding-top: 90px;
     border-top: solid #ffc400 10px;
-    /* Corrected background image URL */
 }
-
-
-/* Overlay for Shade */
-
-.custom-row::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Adjust the opacity to change the shade */
-    z-index: -1;
-    /* Ensure the overlay is behind the content */
-}
-
-
-/* For Tablets (screens up to 768px wide) */
-
-@media (max-width: 768px) {
-    .custom-row {
-        padding: 15px;
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-
-/* For Mobile (screens up to 480px wide) */
-
-@media (max-width: 480px) {
-    .custom-row {
-        padding: 10px;
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 
 /* Custom Column */
-
 .custom-column {
-    width: 550px;
-    height: 500px;
+    width: 30%;
+    min-width: 300px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+    color: rgb(53, 53, 53);
+    font-size: 1rem;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ffc400;
+    border-radius: 20px;
+    margin-bottom: 30px;
 }
 
-
-/* Add fade-in animation */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Column Image */
+.column-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(150px);
-    transition: all 0.8s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-
-/* No Animation Section */
-
-.no-animation {
-    background-color: #ffffff36;
-    color: #666666;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 30px;
+/* Content Wrapper */
+.content-wrapper {
     text-align: left;
 }
 
-.no-animation h2 {
-    font-size: 2.5rem;
-    color: #666666;
-    margin-bottom: 10px;
-    margin-top: -15px;
-}
-
-.no-animation h4 {
-    font-size: 1.3rem;
-    color: #666;
-    margin-bottom: 15px;
-    margin-top: 30px;
-}
-
-.no-animation p {
-    font-size: 1rem;
-    color: #666666;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-weight: 300;
-    margin-left: 65px;
-}
-
-
 /* H6 with Icon */
-
 .h6-wrapper {
     display: flex;
     align-items: center;
@@ -161,32 +67,26 @@ html {
     height: 30px;
 }
 
-
 /* Icon Wrapper */
-
 .icon-wrapper {
     display: flex;
     align-items: center;
-    margin-left: 70px;
     margin-bottom: 15px;
 }
 
 .icon-wrapper img {
     width: 40px;
     height: 40px;
-    margin-left: -70px;
+    margin-right: 10px;
 }
 
 .icon-wrapper h4 {
     font-size: 1.3rem;
     color: #666;
     margin: 0;
-    margin-left: 20px;
 }
 
-
 /* Button */
-
 .discover-button {
     padding: 12px 30px;
     font-size: 1rem;
@@ -196,7 +96,6 @@ html {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.4s, transform 0.3s ease, box-shadow 0.4s ease;
-    margin-left: 65px;
     margin-top: 10px;
 }
 
@@ -207,146 +106,86 @@ html {
     border: 1px solid #1c1c1c;
 }
 
-
 /* Responsive Design */
-
-
-/* General Settings */
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-/* Custom Row */
-
-.custom-row {
-    display: flex;
-    padding: 0px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-    background: url('../../assets/images/programbg.png') no-repeat center center/cover;
-    padding-top: 90px;
-    border-top: solid #ffc400 10px;
-}
-
-
-/* Overlay for Shade */
-
-.custom-row::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-
-/* For Tablets (screens up to 1024px wide) */
-
 @media (max-width: 1024px) {
     .custom-row {
-        padding: 20px;
         flex-direction: column;
         gap: 20px;
     }
     .custom-column {
-        width: 100%;
+        width: calc(100% - 40px); /* Adjust width to account for margins */
+        margin: 0 20px; /* Add 20px margin on both sides */
         height: auto;
-        padding: 10px;
     }
-    .no-animation {
+    .content-wrapper {
         padding: 20px;
     }
     .h6-wrapper h6 {
         font-size: 1rem;
         text-align: center;
     }
-    .no-animation h2 {
+    .content-wrapper h2 {
         font-size: 2rem;
         text-align: center;
     }
-    .no-animation p {
+    .content-wrapper p {
         font-size: 1rem;
-        margin-left: 20px;
+        margin-left: 0;
     }
     .icon-wrapper {
-        margin-left: 80px;
+        justify-content: center;
     }
     .discover-button {
-        margin-left: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-
-/* For Mobile (screens up to 480px wide) */
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .custom-row {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
     .custom-column {
-        width: 100%;
-        height: auto;
+        width: 90%;
     }
-    .no-animation {
+    .content-wrapper {
         padding: 15px;
     }
-    .no-animation h2 {
+    .content-wrapper h2 {
         font-size: 1.5rem;
     }
-    .no-animation h4 {
+    .content-wrapper h4 {
         font-size: 1rem;
     }
-    .no-animation p {
+    .content-wrapper p {
         font-size: 1rem;
-        margin-left: 10px;
         text-align: justify;
     }
     .icon-wrapper {
-        margin-left: 10px;
-        display: flex;
-        margin-left: 75px;
-        margin-bottom: 15px;
+        justify-content: center;
     }
     .discover-button {
         padding: 10px 20px;
         font-size: 0.9rem;
-        margin-left: 10px;
         margin-top: 20px;
-        align-items: center;
         display: flex;
         justify-content: center;
         margin-left: auto;
         margin-right: auto;
     }
-    /* Centering the h6 and zodiac-icon in mobile */
     .h6-wrapper {
-        display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 15px;
     }
     .h6-wrapper h6 {
         font-size: 0.9rem;
-        margin-left: 1px;
         text-align: center;
     }
     .zodiac-icon {
         width: 25px;
         height: 25px;
         margin-right: 10px;
-    }
-    /* Target the 1st and 4th columns and make their images smaller in mobile view */
-    .custom-row .custom-column:nth-child(1) img,
-    .custom-row .custom-column:nth-child(4) img {
-        width: 100%;
-        height: auto;
     }
 }

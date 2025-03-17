@@ -3,8 +3,8 @@ import './ProgramSection.css'; // Import the corresponding CSS file
 
 // Import images from the assets folder
 import planetIcon from '../../assets/images/planet.png';
-import astrologyBanner1 from '../../assets/images/event1.svg';
-import astrologyBanner2 from '../../assets/images/event2.svg';
+import astrologyBanner1 from '../../assets/images/logo-2.jpg';
+
 import zodiacIcon from '../../assets/images/zodiac.png'; // Import zodiac icon
 
 const ProgramSection = () => {
@@ -33,9 +33,9 @@ const ProgramSection = () => {
   return (
     <div className="custom-row">
       {/* First Row: Single Column with Image */}
-      <div className="custom-column column-1 fade-in">
+      {/* <div className="custom-column column-1 fade-in">
         <img src={astrologyBanner1} alt="Astrology Services Banner 1" />
-      </div>
+      </div> */}
 
       {/* Second Row: Two Text Columns */}
       <div className="custom-column column-2 no-animation">
@@ -50,9 +50,9 @@ const ProgramSection = () => {
             <h4>Shape Your Path</h4>
           </div>
           <p>
-            Discover how astrology can guide your life journey. Learn about your zodiac, personality traits, and predictions tailored just for you. Learn about your zodiac, personality traits, and predictions tailored just for you.
+          Discover the secrets of your future with personalized astrological predictions tailored to your birth chart. Gain deep insights into your career, relationships, health, and finances. Our expert astrologers analyze planetary alignments to provide accurate guidance, helping you make informed decisions and navigate life’s challenges with confidence
           </p>
-          <button className="discover-button">More Discover</button>
+          {/* <button className="discover-button">More Discover</button> */}
         </div>
       </div>
 
@@ -75,9 +75,9 @@ const ProgramSection = () => {
       </div>
 
       {/* Third Row: Single Column with Image */}
-      <div className="custom-column column-4 fade-in">
+      {/* <div className="custom-column column-4 fade-in">
         <img src={astrologyBanner2} alt="Astrology Services Banner 2" />
-      </div>
+      </div> */}
     </div>
   );
 };

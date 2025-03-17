@@ -10,6 +10,7 @@ import animatedImage from "../../assets/images/animatedImage.png";
 import animatedImage2 from "../../assets/images/animatedImage-2.png";
 import clientFeedbackImage from "../../assets/images/src.jpg";
 import commaImage from "../../assets/images/comma.png"; // Import the comma image
+import checkmarkImage from "../../assets/images/checkmark-32.png"; // Import the checkmark image
 
 const Overview = () => {
   const [counts, setCounts] = useState({
@@ -47,8 +48,13 @@ const Overview = () => {
         <div className="overview-content">
           <h2 className="overview-title">Our Achievements</h2>
           <p className="overview-description">
-            We are proud of our accomplishments and the milestones we have achieved. Our dedication to excellence and our commitment to providing top-notch services have earned us the trust and loyalty of our clients.
+            We are proud of the impact we’ve made on countless individuals seeking guidance and peace in their lives. Our customers’ satisfaction speaks for our dedication and expertise. Over the years, we have:
           </p>
+          <ul className="overview-points">
+            <li><img src={checkmarkImage} alt="Checkmark" className="point-icon" /> Helped over [X] individuals achieve clarity and make informed life decisions through personalized astrological insights.</li>
+            <li><img src={checkmarkImage} alt="Checkmark" className="point-icon" /> Worked with more than [X] clients to bring Vastu-compliant changes to their homes and workplaces, leading to improved energy flow and success.</li>
+            <li><img src={checkmarkImage} alt="Checkmark" className="point-icon" /> Delivered organic remedies like saambrani kudu to thousands, enhancing their spiritual practices and well-being.</li>
+          </ul>
         </div>
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}

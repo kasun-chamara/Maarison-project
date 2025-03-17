@@ -8,32 +8,26 @@
     text-align: center;
     margin-top: 100px;
     overflow: hidden;
-    color: #ffffff;
     background: url('../../assets/images/Footer-.png') no-repeat center center;
-    /* Adding a soft border for separation */
+    background-size: cover;
 }
-
 
 /* Footer Container */
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     gap: 20px;
-    /* Adds spacing between flex items */
 }
-
 
 /* Logo and Name Section */
 
 .footer-left {
-    flex: 1;
-    max-width: 300px;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-logo {
@@ -47,53 +41,23 @@
     color: #ffffff;
     font-weight: bold;
     margin-top: 15px;
-    text-align: center;
 }
 
 .footer-description {
     font-size: 1em;
     color: #d4d4d4;
     margin-top: 10px;
+}
+
+/* Contact Information Section */
+
+.footer-right {
     text-align: center;
 }
 
-
-/* Quick Links and Contact Section */
-
-.footer-right {
-    flex: 2;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* Adds spacing between links and contact */
-}
-
-.footer-links,
-.footer-contact {
-    flex: 1;
-    max-width: 250px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 8px;
-}
-
-.footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #ffcb30;
+.footer-contact h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .footer-contact p {
@@ -111,7 +75,6 @@
 .footer-contact a:hover {
     color: #e07b37;
 }
-
 
 /* Call-to-Action Button */
 
@@ -133,9 +96,7 @@
 .btn:hover {
     background-color: #e07b37;
     transform: translateY(-3px);
-    /* Subtle lift effect */
 }
-
 
 /* Footer Bottom Section */
 
@@ -148,6 +109,26 @@
     text-align: center;
 }
 
+/* Social Media Icons Section */
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    font-size: 8px;
+    margin-bottom: -30px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ffcb30;
+}
 
 /* Responsive Design */
 
@@ -164,41 +145,15 @@
         margin: 0 auto;
     }
     .footer-right {
-        flex-direction: column;
         text-align: center;
         gap: 30px;
     }
-    .footer-links,
-    .footer-contact {
+    .footer-contact,
+    .meet-maarison {
         text-align: center;
         margin: 0 auto;
     }
     .meet-maarison {
         margin-top: 20px;
     }
-}
-
-
-/* Social Media Icons Styles */
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    /* Reduces the gap between icons */
-    margin-top: 15px;
-    font-size: 8px;
-    margin-bottom: -30px;
-    /* Adjusts the spacing above the icons */
-}
-
-.footer-social a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    /* Sets the icon size to be smaller */
-}
-
-.footer-social a:hover {
-    color: #ffcb30;
 }

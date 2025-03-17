@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Hero.css';
 
 import LogoImage from '../../assets/images/logo-2.jpg';
-import MaarisonHero from '../../assets/images/MR.png'; // Import the image here
+// Import the image here
 
 const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -27,13 +27,13 @@ const Hero = () => {
           </div>
           {/* Right Image Section */}
           <div className="col-md-6 hero-image">
-            <div className="image-wrapper">
+            {/* <div className="image-wrapper">
               <img
                 src={MaarisonHero}
                 alt="Maarison's Wisdom"
                 className="img-fluid"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -52,7 +52,6 @@ const Hero = () => {
                   src={LogoImage} // Use the imported image
                   alt="Logo"
                   className="popup-logo"
-                 
                 />
                 <h2 className='popup-title'>About Maarison Acharya</h2>
                 <p className='popup-description'>
@@ -61,53 +60,50 @@ const Hero = () => {
               </div>
               {/* Right Column */}
               <div className="popup-right">
-              
-              <h2 className='popup-title-right'>Fill in Your Details</h2>
-               <p className='popup-description-2'>
+                <h2 className='popup-title-right'>Fill in Your Details</h2>
+                <p className='popup-description-2'>
                   Maarison Acharya is a beacon of wisdom, guiding you through life's challenges and helping you find balance and harmony.
                 </p>
-                  <form>
-  {/* Name, Contact, and Birthday */}
-  <div className="form-row">
-    <div className="form-group">
-      <label htmlFor="name">Name:</label>
-      <input type="text" id="name" placeholder="Enter your name" />
-    </div>
-    <div className="form-group">
-      <label htmlFor="contact">Contact:</label>
-      <input type="text" id="contact" placeholder="Enter your contact" />
-    </div>
-  </div>
-  <div className="form-row">
-    <div className="form-group">
-      <label htmlFor="birthday">Birthday:</label>
-      <input type="date" id="birthday" />
-    </div>
-    <div className="form-group">
-      <label htmlFor="birthtime">Birth Time:</label>
-      <input type="time" id="birthtime" />
-    </div>
-  </div>
-  {/* Service Selection and Submit Button */}
-  <div className="form-row">
-    <div className="form-group col-service">
-      <label htmlFor="service">Select Service:</label>
-      <select id="service">
-        <option value="">Select a service</option>
-        <option value="service1">Service 1</option>
-        <option value="service2">Service 2</option>
-        <option value="service3">Service 3</option>
-      </select>
-    </div>
-    <div className="form-group col-submit">
-      <button type="submit" className="btn-submit">
-        Submit
-      </button>
-    </div>
-  </div>
-</form>
-
-
+                <form>
+                  {/* Name, Contact, and Birthday */}
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="name">Name:</label>
+                      <input type="text" id="name" placeholder="Enter your name" />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="contact">Contact:</label>
+                      <input type="text" id="contact" placeholder="Enter your contact" />
+                    </div>
+                  </div>
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="birthday">Birthday:</label>
+                      <input type="date" id="birthday" />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="birthtime">Birth Time:</label>
+                      <input type="time" id="birthtime" />
+                    </div>
+                  </div>
+                  {/* Service Selection and Submit Button */}
+                  <div className="form-row">
+                    <div className="form-group col-service">
+                      <label htmlFor="service">Select Service:</label>
+                      <select id="service">
+                        <option value="">Select a service</option>
+                        <option value="service1">Service 1</option>
+                        <option value="service2">Service 2</option>
+                        <option value="service3">Service 3</option>
+                      </select>
+                    </div>
+                    <div className="form-group col-submit">
+                      <button type="submit" className="btn-submit">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

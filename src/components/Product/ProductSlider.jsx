@@ -13,36 +13,36 @@ import Pcard4 from "../../assets/images/Pcard4.png";
 const products = [
   {
     id: 1,
-    name: "Product 1",
+    name: "The Divine Shell",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed officia minima nesciunt eum ducimus cumque earum.",
+      "A rare and sacred conch, Walampuri is known for its spiritual significance, attracting prosperity, positivity, and divine blessings.",
     image: Pcard1,
     additionalImage:
       "https://media.istockphoto.com/id/177983583/photo/queen-conch-on-the-dock.jpg?s=612x612&w=0&k=20&c=jf8TyckwZy-XRSL1G8Tjo8vxMRisZ7P-dKTtCFefoBc=",
   },
   {
     id: 2,
-    name: "Product 2",
+    name: "Bangles ",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed officia minima nesciunt eum ducimus cumque earum.",
+      "Worn for spiritual and astrological benefits, these bangles enhance positive energy, ward off negativity, and bring balance to life.",
     image: Pcard2,
     additionalImage:
       "https://content.jdmagicbox.com/quickquotes/images_main/designer-gold-bangles-2209676315-mon8pgvj.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit",
   },
   {
     id: 3,
-    name: "Product 3",
+    name: "Suwandakudu",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed officia minima nesciunt eum ducimus cumque earum.",
+      "A traditional incense with a soothing aroma, Suwandakudu purifies the environment and uplifts the mind, body, and soul.",
     image: Pcard3,
     additionalImage:
       "https://media.istockphoto.com/id/586705490/photo/cocoa-powder-into-a-bowl-and-spoon.jpg?s=612x612&w=is&k=20&c=eb3sRY3398EM4w1MNcqZ71d98pM8bwOQW4Th0d1pmGo=",
   },
   {
     id: 4,
-    name: "Product 4",
+    name: "Astrology Books",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed officia minima nesciunt eum ducimus cumque earum.",
+      "Discover books filled with astrological insights, remedies, and guidance to help you align with cosmic energies and destiny.",
     image: Pcard4,
     additionalImage:
       "https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg",

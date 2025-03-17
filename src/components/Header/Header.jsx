@@ -1,94 +1,70 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Hamburger from "hamburger-react"; // Import Hamburger component
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Header.css";
 import logo from "../../assets/images/logo.png";
 
 const Header = () => {
   const location = useLocation();
   const [isOpen, setOpen] = useState(false); // Manage the state of the hamburger menu
+  const [isVisible, setIsVisible] = useState(true); // Manage the visibility of the navbar
 
   // Function to close the hamburger menu when a link is clicked
   const handleLinkClick = () => {
     setOpen(false); // Close the hamburger menu
   };
 
+  // Function to handle scroll events
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    const visible = currentScrollPos < 10 || currentScrollPos < window.prevScrollPos;
+    setIsVisible(visible);
+    window.prevScrollPos = currentScrollPos;
+  };
+
+  useEffect(() => {
+    window.prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="custom-navbar">
-      <div className="navbar-container">
+    <Navbar expand="lg" className={`custom-navbar ${isVisible ? "visible" : "hidden"}`} expanded={isOpen}>
+      <Container className="navbar-container">
         {/* Logo */}
-        <Link to="/" className="logo">
+        <Navbar.Brand as={Link} to="/" className="logo">
           <img src={logo} alt="Logo" />
-        </Link>
+        </Navbar.Brand>
 
-        {/* Navigation Links */}
-        <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-          <li>
-            <Link
-              className={`nav-link ${location.pathname === "/" ? "active-link" : ""}`}
-              to="/"
-              onClick={handleLinkClick} // Close the menu when clicked
-            >
+        {/* Hamburger Menu for Mobile */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setOpen(!isOpen)} />
+
+        {/* Full Menu Section */}
+        <Navbar.Collapse id="basic-navbar-nav">
+          {/* Middle Section: Navigation Links */}
+          <Nav className="ml-auto nav-links">
+            <Nav.Link as={Link} to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`} onClick={handleLinkClick}>
               Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`nav-link ${location.pathname === "/services" ? "active-link" : ""}`}
-              to="/services"
-              onClick={handleLinkClick}
-            >
+            </Nav.Link>
+            {/* <Nav.Link as={Link} to="/services" className={`nav-link ${location.pathname === "/services" ? "active" : ""}`} onClick={handleLinkClick}>
               Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`nav-link ${location.pathname === "/products" ? "active-link" : ""}`}
-              to="/products"
-              onClick={handleLinkClick} // Close the menu when clicked
-            >
+            </Nav.Link> */}
+            <Nav.Link as={Link} to="/products" className={`nav-link ${location.pathname === "/products" ? "active" : ""}`} onClick={handleLinkClick}>
               Products
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`nav-link ${location.pathname === "/programs" ? "active-link" : ""}`}
-              to="/programs"
-              onClick={handleLinkClick} // Close the menu when clicked
-            >
-              Programs
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`nav-link ${location.pathname === "/events" ? "active-link" : ""}`}
-              to="/events"
-              onClick={handleLinkClick} // Close the menu when clicked
-            >
-              Events
-            </Link>
-          </li>
-        </ul>
+            </Nav.Link>
+          </Nav>
 
-        {/* Search and Notification */}
-        <div className="extras">
-          <div className="search-bar">
-            <input type="text" placeholder="Search" />
-            <span className="search-icon">
-              <i className="fas fa-search"></i>
-            </span>
-          </div>
-          <div className="notification-icon">
-            <i className="fas fa-bell"></i>
-          </div>
-        </div>
-
-        {/* Hamburger Menu */}
-        <div className="hamburger-container">
-          <Hamburger toggled={isOpen} toggle={setOpen} /> {/* Hamburger component */}
-        </div>
-      </div>
-    </nav>
+          {/* Call Me Button */}
+          <Nav className="ml-auto call-me-button">
+            <button className="button" onClick={handleLinkClick}>Call Me</button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

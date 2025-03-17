@@ -44,10 +44,14 @@ const About = () => {
         Why Choose Us
       </h2>
       <p className="pclass" data-aos="zoom-in">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro temporibus, illum
-        provident impedit incidunt suscipit voluptas recusandae minus. Dignissimos est quidem
-        unde maxime, numquam tenetur ipsum nisi soluta distinctio eius.
+        At maarison’s wisdom, we combine the ancient wisdom of astrology with modern insights to provide you with personalized guidance that resonates with your unique life journey. Our team of experienced astrologers and vastu consultants offers a holistic approach to life’s challenges, helping you find clarity, peace, and prosperity. With our trusted expertise, we deliver solutions that are tailored to your specific needs, ensuring you receive the best advice possible. Choose us for:
       </p>
+      <ul className="checklist" data-aos="zoom-in">
+        <li><img src={Checkmark} alt="Checkmark" /> Accurate and reliable astrological predictions</li>
+        <li><img src={Checkmark} alt="Checkmark" /> Customized solutions based on your unique birth chart</li>
+        <li><img src={Checkmark} alt="Checkmark" /> Genuine care for your spiritual well-being</li>
+        <li><img src={Checkmark} alt="Checkmark" /> Expertise in Vastu Shastra to bring harmony into your living spaces</li>
+      </ul>
 
       {/* New Image and Content Layout */}
       <div className="about-container">
@@ -60,12 +64,15 @@ const About = () => {
         <div className="about-content" data-aos="fade-left">
           <h3>Our Unique Approach</h3>
           <p>
-            We believe in delivering exceptional value through innovative solutions that
-            cater to your specific needs. From tailored services to unparalleled support,
-            we ensure customer satisfaction every step of the way.<br></br> <br></br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro temporibus, illum
-        provident impedit incidunt suscipit voluptas recusandae minus. 
+            We believe that astrology is not just about predicting the future—it's about understanding your inner self and aligning your life with the cosmic forces around you. Our unique approach involves:
           </p>
-          <button className="discover-more-btn">Discover More</button>
+          <ul className="checklist">
+            <li><img src={Checkmark} alt="Checkmark" /> Personalized Consultations – We take the time to understand your specific situation and provide astrology consultations that address your personal concerns.</li>
+            <li><img src={Checkmark} alt="Checkmark" /> Holistic Solutions – Whether it’s guidance on your career, relationships, or health, our recommendations are based on the complete picture of your life.</li>
+            <li><img src={Checkmark} alt="Checkmark" /> Vastu Integration – We combine the ancient science of Vastu Shastra with astrology to offer you practical solutions for peace, prosperity, and balance in your home and workspace.</li>
+            <li><img src={Checkmark} alt="Checkmark" /> Natural Remedies – We emphasize the use of organic and natural methods, such as organic saambrani kudu and personalized bangles, for spiritual healing.</li>
+          </ul>
+
         </div>
       </div>
 
@@ -75,15 +82,14 @@ const About = () => {
         <div className="about-content" data-aos="fade-right">
           <h3 className="section-title-2">Discover Our Services</h3>
           <p>
-            Our services are designed to provide you with the best experience possible. We
-            offer a wide range of solutions to meet your needs and exceed your expectations.
+            We offer a comprehensive range of services to help you unlock the mysteries of your life and align yourself with the universe’s energy. From astrology insights to Vastu consultations, we ensure every service is designed to provide clarity and balance. Explore our offerings:
           </p>
           <ul className="checklist">
-            <li><img src={Checkmark} alt="Checkmark" /> High-quality products.</li>
-            <li><img src={Checkmark} alt="Checkmark" /> Exceptional customer service.</li>
-            <li><img src={Checkmark} alt="Checkmark" /> Affordable pricing.</li>
-            <li><img src={Checkmark} alt="Checkmark" /> Fast and reliable delivery.</li>
-            <li><img src={Checkmark} alt="Checkmark" /> Satisfaction guaranteed.</li>
+            <li><img src={Checkmark} alt="Checkmark" /> Personalized Predictions – Receive detailed and customized astrological forecasts that offer insight into your life’s path.</li>
+            <li><img src={Checkmark} alt="Checkmark" /> Astrology Insights – Deep insights into your horoscope, guiding you in making informed decisions on health, relationships, career, and more.</li>
+            <li><img src={Checkmark} alt="Checkmark" /> Personalized Bangles – Specially crafted bangles tailored to your astrological needs for protection, good fortune, and spiritual well-being.</li>
+            <li><img src={Checkmark} alt="Checkmark" />Organic Saambrani Kudu  – Pure, organic incense that connects you to higher energies, calming your mind and creating a harmonious environment.</li>
+            <li><img src={Checkmark} alt="Checkmark" /> Vastu Consultations – Receive guidance on the layout and design of your home or office according to Vastu principles to enhance positivity and prosperity.</li>
           </ul>
         </div>
 

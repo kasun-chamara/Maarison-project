@@ -2,8 +2,8 @@
 
 .product-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 cards per row */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 cards per row */
     gap: 20px;
     margin: 20px auto;
     /* Center the container horizontally */
@@ -22,7 +22,6 @@
     padding: 100px;
     text-align: center;
 }
-
 
 /* Header Banner */
 
@@ -56,6 +55,39 @@
     font-weight: 500;
 }
 
+/* Product Prices */
+.product-prices {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: left;
+    width: 1070px;
+    /* Set a fixed width */
+    max-width: 100%;
+    /* Make it responsive on smaller screens */
+    margin: 0 auto 30px;
+    /* Center horizontally and add bottom margin */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffe8bc;
+}
+
+.product-prices .price-item {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+    flex: 1 1 22%;
+    /* Ensure items wrap and take up equal space */
+    text-align: center;
+}
+
+.product-prices .price-item strong {
+    color: #333;
+}
 
 /* Category Tabs */
 
@@ -88,7 +120,6 @@
     background-color: #ffa200;
     color: #fff;
 }
-
 
 /* Product Grid */
 
@@ -138,18 +169,12 @@
 }
 
 .price-location {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-    font-weight: bold;
+    display: none; /* Hide the price and location */
 }
 
 .price {
-    color: #4b4b4b;
-    font-weight: 900;
-    font-size: 1.5rem;
+    display: none; /* Hide the price */
 }
-
 
 /* For the smaller Buy Now button */
 
@@ -169,7 +194,6 @@
     /* Centers button horizontally */
 }
 
-
 /* For medium screens */
 
 @media (max-width: 768px) {
@@ -181,7 +205,6 @@
         /* Adjusted margin */
     }
 }
-
 
 /* For small screens */
 
@@ -195,7 +218,6 @@
         /* Adjusted margin for small screens */
     }
 }
-
 
 /* For medium screens */
 
@@ -213,7 +235,6 @@
         padding: 10px 20px;
     }
 }
-
 
 /* For small screens */
 
@@ -249,7 +270,6 @@
         padding: 20px;
     }
     .price {
-        font-weight: 900;
-        font-size: 2rem;
+        display: none; /* Hide the price */
     }
 }

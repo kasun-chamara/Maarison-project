@@ -36,9 +36,8 @@ const ServicePage = () => {
       <h3 className="section-sub-title1">Exclusive Deals Just for You</h3>
       <h1 className="service-header-title">Our Services</h1>
       <p className="pclass" data-aos="zoom-in">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro temporibus, illum
-        provident impedit incidunt suscipit voluptas recusandae minus. Dignissimos est quidem
-        unde maxime, numquam tenetur ipsum nisi soluta distinctio eius.
+      We offer a range of services to support your spiritual and practical journey through life:
+
       </p>
       {/* Top Section */}
       <div
@@ -46,20 +45,19 @@ const ServicePage = () => {
         ref={topSectionRef}
       >
         <div className="service-custom-left-class">
-          <h2>Our Expertise</h2>
+          <h2>Personalized Predictions</h2>
           <p>
-            We provide cutting-edge solutions to meet your business needs. From
-            mobile and web development to cloud solutions, we've got you
-            covered.
+          Personalized Predictions,
+          Based on your unique astrological chart, we provide tailored predictions about your life’s journey, helping you navigate challenges and make empowered decisions.
           </p>
-          <div className="service-button-group">
+          {/* <div className="service-button-group">
             <a href="#explore">Explore More</a>
-          </div>
+          </div> */}
         </div>
 
         <div className="service-right-column">
           <img
-            src="https://www.clickastro.com/blog/wp-content/uploads/2021/11/Free-astrology-from-renowned-astrologers.jpg"
+            src="https://imageio.forbes.com/specials-images/imageserve/66fd590b77b265636f7df4eb/Astrologer-using-mobile-smart-phone-app-and-computer-to-make-predictions-on-future/960x0.jpg?height=474&width=711&fit=bounds"
             alt="Expertise"
           />
         </div>
@@ -70,53 +68,53 @@ const ServicePage = () => {
   <div className="service-card card-1">
     <div className="card-image">
       <img
-        src="https://www.ekhartyoga.com/media/image/articles/Laia_Bove_Mermaid-pose.jpg"
+        src="https://saketbhatia.com/wp-content/uploads/2023/01/solar-system-with-planets-and-numbers-in-space-1024x585.webp"
         alt="Card 1"
       />
     </div>
     <div className="card-content">
-      <h3>Card 1 Title</h3>
-      <p>Some description for Card 1. It explains the content in more detail.</p>
-      <a href="#learn-more" className="card-button">Learn More</a>
+      <h3>Astrology Insights</h3>
+      <p>Gain deeper insight into your horoscope, understand your strengths and challenges, and receive guidance that aligns with your life’s purpose.</p>
+      {/* <a href="#learn-more" className="card-button">Learn More</a> */}
     </div>
   </div>
   <div className="service-card card-2">
     <div className="card-image">
       <img
-        src="https://londonspd.com/blog/wp-content/uploads/2024/03/psychology-overview.jpg"
+        src="https://i.etsystatic.com/11643802/r/il/18b093/1335290595/il_570xN.1335290595_2mjn.jpg"
         alt="Card 2"
       />
     </div>
     <div className="card-content">
-      <h3>Card 2 Title</h3>
-      <p>Some description for Card 2. It explains the content in more detail.</p>
-      <a href="#learn-more" className="card-button">Learn More</a>
+      <h3>Personalized Bangles</h3>
+      <p>These specially designed bangles are created to match your birth chart and astrological requirements. They offer protection, positivity, and prosperity.</p>
+      {/* <a href="#learn-more" className="card-button">Learn More</a> */}
     </div>
   </div>
   <div className="service-card card-3">
     <div className="card-image">
       <img
-        src="https://anarghyaa.com/cdn/shop/products/anarghyaa-vastu-consultation_480x480.jpg?v=1576556294"
+        src="https://www.thugil.com/pub/media/catalog/product/cache/e803c1b4714a8f5bf8d014633abc652b/p/j/pjp032-sambrani-cup.jpg"
         alt="Card 3"
       />
     </div>
     <div className="card-content">
-      <h3>Card 3 Title</h3>
-      <p>Some description for Card 3. It explains the content in more detail.</p>
-      <a href="#learn-more" className="card-button">Learn More</a>
+      <h3>Organic Saambrani Kudue</h3>
+      <p> Experience the soothing power of organic saambrani kudu, a natural incense that purifies your space and helps you connect with your higher self.</p>
+      {/* <a href="#learn-more" className="card-button">Learn More</a> */}
     </div>
   </div>
   <div className="service-card card-4">
     <div className="card-image">
       <img
-        src="https://images.lifestyleasia.com/wp-content/uploads/sites/2/2024/10/02102004/daily-horoscope-2-oct-2024-1600x900.jpeg"
+        src="https://5.imimg.com/data5/SELLER/Default/2024/10/461172479/SU/QT/LM/23146979/house-land-vastu-consultancy-services-expert-500x500.jpg"
         alt="Card 4"
       />
     </div>
     <div className="card-content">
-      <h3>Card 4 Title</h3>
-      <p>Some description for Card 4. It explains the content in more detail.</p>
-      <a href="#learn-more" className="card-button">Learn More</a>
+      <h3>Vastu Consultations</h3>
+      <p>Our vastu experts provide advice on how to design your home or workspace to promote peace, success, and well-being according to ancient vastu principles.</p>
+      {/* <a href="#learn-more" className="card-button">Learn More</a> */}
     </div>
   </div>
 </div>
