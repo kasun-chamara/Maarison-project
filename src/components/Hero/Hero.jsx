@@ -64,33 +64,36 @@ const Hero = () => {
                 <p className='popup-description-2'>
                   Maarison Acharya is a beacon of wisdom, guiding you through life's challenges and helping you find balance and harmony.
                 </p>
-                <form>
+                <form
+                  action="https://formsubmit.co/878fcfd6a74ff92df0678d58b6ccdc96"  // Form submission URL
+                  method="POST"
+                >
                   {/* Name, Contact, and Birthday */}
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="name">Name:</label>
-                      <input type="text" id="name" placeholder="Enter your name" />
+                      <input type="text" id="name" name="name" placeholder="Enter your name" required />
                     </div>
                     <div className="form-group">
                       <label htmlFor="contact">Contact:</label>
-                      <input type="text" id="contact" placeholder="Enter your contact" />
+                      <input type="text" id="contact" name="contact" placeholder="Enter your contact" required />
                     </div>
                   </div>
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="birthday">Birthday:</label>
-                      <input type="date" id="birthday" />
+                      <input type="date" id="birthday" name="dob" required />
                     </div>
                     <div className="form-group">
                       <label htmlFor="birthtime">Birth Time:</label>
-                      <input type="time" id="birthtime" />
+                      <input type="time" id="birthtime" name="birth_time" required />
                     </div>
                   </div>
                   {/* Service Selection and Submit Button */}
                   <div className="form-row">
                     <div className="form-group col-service">
                       <label htmlFor="service">Select Service:</label>
-                      <select id="service">
+                      <select id="service" name="service" required>
                         <option value="">Select a service</option>
                         <option value="service1">Service 1</option>
                         <option value="service2">Service 2</option>
@@ -103,6 +106,10 @@ const Hero = () => {
                       </button>
                     </div>
                   </div>
+
+                  {/* Hidden Inputs for FormSubmit */}
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="http://192.168.8.198:5173/" /> {/* Redirect after submission */}
                 </form>
               </div>
             </div>

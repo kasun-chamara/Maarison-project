@@ -41,12 +41,12 @@ const Footer = () => {
         <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
           <FaYoutube size={30} />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <FaTwitter size={30} />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
           <FaInstagram size={30} />
-        </a>
+        </a> */}
       </div>
 
       {/* Footer Bottom Section */}

@@ -5,7 +5,6 @@ import DotsSvg from "../../assets/images/Dots.svg";
 import zodiacIcon from "../../assets/images/zodiac.png";
 import meetImage from "../../assets/images/meet-image.jpg";
 
-
 const MeetMaarisonAcharya = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -62,14 +61,11 @@ const MeetMaarisonAcharya = () => {
       {/* Animated Section */}
       <div
         ref={sectionRef}
-        className={`columns-container animate-bottom-to-top ${
-          isVisible ? "visible" : ""
-        }`}
+        className={`columns-container animate-bottom-to-top ${isVisible ? "visible" : ""}`}
       >
         {/* Left Column */}
         <div className="left-column">
-         <img src={meetImage} alt="Astrology Image" className="side-image" />
-
+          <img src={meetImage} alt="Astrology Image" className="side-image" />
         </div>
 
         {/* Right Column */}
@@ -79,25 +75,34 @@ const MeetMaarisonAcharya = () => {
             <h6>Maarison Wisdom</h6>
           </div>
           <h2>Contact Us</h2>
-          <form className="contact-form">
-            <input type="text" placeholder="Name" required />
-            <input type="text" placeholder="Phone Number" required />
+          <form
+            className="contact-form"
+            action="https://formsubmit.co/878fcfd6a74ff92df0678d58b6ccdc96"
+            method="POST"
+          >
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="text" name="phone" placeholder="Phone Number" required />
+            
             <div className="date-time-row">
-              <input type="date" placeholder="Date of Birth" required />
-              <input type="time" placeholder="Birth Time" required />
+              <input type="date" name="dob" placeholder="Date of Birth" required />
+              <input type="time" name="birth_time" placeholder="Birth Time" required />
             </div>
-            <input type="text" placeholder="Birth Location" required />
+            
+            <input type="text" name="birth_location" placeholder="Birth Location" required />
+            
             <div className="service-row">
-              <select required>
-                <option value="" disabled selected>
-                  Select Service
-                </option>
+              <select name="service" required>
+                <option value="" disabled selected>Select Service</option>
                 <option value="horoscope">Horoscope</option>
                 <option value="astrology">Astrology Reading</option>
                 <option value="numerology">Numerology</option>
               </select>
-              <button type="submit">Submit</button>
+              <button type="submit" className="button">Submit</button>
             </div>
+            
+            {/* Hidden Inputs for FormSubmit */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="http://192.168.8.198:5173/" />
           </form>
         </div>
       </div>

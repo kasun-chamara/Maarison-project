@@ -50,8 +50,7 @@ const ProgramSection = () => {
             <h4>Shape Your Path</h4>
           </div>
           <p>
-          Discover the secrets of your future with personalized astrological predictions tailored to your birth chart. Gain deep insights into your career, relationships, health, and finances. Our expert astrologers analyze planetary alignments to provide accurate guidance, helping you make informed decisions and navigate life’s challenges with confidence
-          </p>
+          Unlock the secrets of your future with personalized astrological predictions. Our expert astrologers analyze your birth chart to offer insights into career, relationships, health, and finances, guiding you to make informed decisions and navigate life with confidence.</p>
           {/* <button className="discover-button">More Discover</button> */}
         </div>
       </div>
@@ -68,9 +67,8 @@ const ProgramSection = () => {
             <h4>Unlock Your Future</h4>
           </div>
           <p>
-            Discover how astrology can guide your life journey.Learn about your zodiac, personality traits, and predictions tailored just for you. Learn about your zodiac, personality traits, and predictions tailored just for you.
-          </p>
-          <button className="discover-button">More Discover</button>
+          Astrology offers profound insights into your life journey by analyzing your birth chart, revealing your zodiac sign's influence on your personality traits, and providing tailored predictions for your career, relationships, health, finances, education, spirituality, and personal growth. </p>
+          {/* <button className="discover-button">More Discover</button> */}
         </div>
       </div>
 
