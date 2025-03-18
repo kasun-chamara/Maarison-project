@@ -25,7 +25,7 @@ const Footer = () => {
 
           {/* Meet Maarison Button */}
           <div className="meet-maarison">
-            <a href="#meet" className="btn">Meet Maarison Acharya</a>
+            <a href="https://wa.me/94770160161" className="btn" target="_blank" rel="noopener noreferrer">Meet Maarison Acharya</a>
           </div>
         </div>
       </div>

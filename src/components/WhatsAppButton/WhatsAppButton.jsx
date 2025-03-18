@@ -5,7 +5,7 @@ import whatsappIcon from "../../assets/images/Whatsapp.png"; // Add a WhatsApp i
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/yourphonenumber" // Replace 'yourphonenumber' with your actual WhatsApp number
+      href="https://wa.me/94770160161" // Replace 'yourphonenumber' with your actual WhatsApp number
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button"

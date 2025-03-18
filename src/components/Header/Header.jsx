@@ -50,9 +50,6 @@ const Header = () => {
             <Nav.Link as={Link} to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`} onClick={handleLinkClick}>
               Home
             </Nav.Link>
-            {/* <Nav.Link as={Link} to="/services" className={`nav-link ${location.pathname === "/services" ? "active" : ""}`} onClick={handleLinkClick}>
-              Services
-            </Nav.Link> */}
             <Nav.Link as={Link} to="/products" className={`nav-link ${location.pathname === "/products" ? "active" : ""}`} onClick={handleLinkClick}>
               Products
             </Nav.Link>
@@ -60,7 +57,9 @@ const Header = () => {
 
           {/* Call Me Button */}
           <Nav className="ml-auto call-me-button">
-            <button className="button" onClick={handleLinkClick}>Call Me</button>
+            <a href="https://wa.me/94770160161" className="button" target="_blank" rel="noopener noreferrer">
+              Call Me
+            </a>
           </Nav>
         </Navbar.Collapse>
       </Container>

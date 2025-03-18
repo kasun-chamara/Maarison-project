@@ -98,6 +98,24 @@
     transform: translateY(-3px);
 }
 
+/* Phone Button */
+.phone-button {
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffcb30, #ff8a00);
+    color: #303030;
+    padding: 12px 15px;
+    font-size: .8em;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.phone-button:hover {
+    background-color: #e07b37;
+    transform: translateY(-3px);
+}
+
 /* Footer Bottom Section */
 
 .footer-bottom {
