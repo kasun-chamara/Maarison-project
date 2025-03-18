@@ -65,7 +65,7 @@ const Hero = () => {
                   Maarison Acharya is a beacon of wisdom, guiding you through life's challenges and helping you find balance and harmony.
                 </p>
                 <form
-                  action="https://formsubmit.co/878fcfd6a74ff92df0678d58b6ccdc96"  // Form submission URL
+                  action="https://formsubmit.co/kapilanranasinghe@gmail.com"  // Form submission URL
                   method="POST"
                 >
                   {/* Name, Contact, and Birthday */}
@@ -95,9 +95,9 @@ const Hero = () => {
                       <label htmlFor="service">Select Service:</label>
                       <select id="service" name="service" required>
                         <option value="">Select a service</option>
-                        <option value="service1">Service 1</option>
-                        <option value="service2">Service 2</option>
-                        <option value="service3">Service 3</option>
+                        <option value="horoscope">Horoscope</option>
+                <option value="astrology">Astrology Reading</option>
+                <option value="numerology">Numerology</option>
                       </select>
                     </div>
                     <div className="form-group col-submit">
@@ -109,7 +109,7 @@ const Hero = () => {
 
                   {/* Hidden Inputs for FormSubmit */}
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="http://192.168.8.198:5173/" /> {/* Redirect after submission */}
+                  <input type="hidden" name="_next" value="https://maarisonacharya.com/" /> {/* Redirect after submission */}
                 </form>
               </div>
             </div>

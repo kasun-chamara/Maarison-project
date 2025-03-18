@@ -77,7 +77,7 @@ const MeetMaarisonAcharya = () => {
           <h2>Contact Us</h2>
           <form
             className="contact-form"
-            action="https://formsubmit.co/878fcfd6a74ff92df0678d58b6ccdc96"
+            action="https://formsubmit.co/kapilanranasinghe@gmail.com"
             method="POST"
           >
             <input type="text" name="name" placeholder="Name" required />
@@ -102,7 +102,7 @@ const MeetMaarisonAcharya = () => {
             
             {/* Hidden Inputs for FormSubmit */}
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="http://192.168.8.198:5173/" />
+            <input type="hidden" name="_next" value="https://maarisonacharya.com/" />
           </form>
         </div>
       </div>
